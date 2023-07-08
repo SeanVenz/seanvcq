@@ -1,0 +1,46 @@
+@import "../../styles/variables";
+@import "../../styles/font"; 
+
+.skill {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding-top: 40px;
+  background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+
+  h2 {
+    letter-spacing: 5px;
+    font: {
+      family: $heading-font;
+      weight: 800;
+    }
+    color: $text;
+  }
+}
+
+.item {
+  position: relative;
+  text-align: center;
+
+  img {
+    // Styles for the skill image
+  }
+
+  h5 {
+    // Styles for the skill name
+  }
+
+  .skill-progress {
+    background-color: #f0f0f0;
+    height: 8px;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-top: 0.5rem;
+
+    .progress-bar {
+      height: 100%;
+      background-color: #007bff;
+      border-radius: 4px;
+    }
+  }
+}

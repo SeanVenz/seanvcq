@@ -1,49 +1,82 @@
 @import "../../styles/variables";
 @import "../../styles/font";
 
-.about{
-    margin: 0 auto;
+.about {
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 1140px;
+  align-items: center;
+  align-self: center;
+  padding-top: 50px;
+
+  .info {
+    display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    width: 1140px;
-    align-items: center;
-    align-self: center;
-    padding-top: 50px;
+    gap: 20px;
+  }
 
-    h2{
-        font: {
-            family: $text-font;
-        }
-        color: $text;
+  h3 {
+    font-family: $heading-font;
+    letter-spacing: 1px;
+  }
+
+  p {
+    font-family: $text-font;
+  }
+
+  h2 {
+    font: {
+      family: $heading-font;
+      size: 40px;
+    }
+    color: $text;
+    letter-spacing: 3px;
+  }
+
+  .about-description {
+    display: flex;
+    flex-direction: row;
+    color: $text;
+    padding-top: 20px;
+    // align-items: center;
+
+    .description {
+      width: 55%;
+      font: {
+        font-family: $text-font;
+        size: 20px;
+      }
+      letter-spacing: 1px;
+      align-items: center;
+      text-align: center;
     }
 
-    .about-description{
-        display: flex;
-        flex-direction: row;
+    .contact {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      padding-left: 10%;
+      width: 45%;
+      gap: 10px;
+    }
+    img {
+      width: 32px;
+      height: 32px;
+    }
+  }
+}
+
+.interests{
+    h4{
+        font: {
+            family: $heading-font;
+            size: 36px;
+        }
+        letter-spacing: 2px;
         color: $text;
-        padding-top: 20px;
-
-        .description{
-            width: 55%;
-            font: {
-                font-family: $text-font;
-                size: 20px;
-            }
-        }
-
-        .contact{
-            width: 45%;
-        }
-
-        a {
-            img {
-                width: 32px;
-                height: auto;
-            }
-            .social-circle{
-                border-radius: 25px;
-            }
-        }
     }
 }

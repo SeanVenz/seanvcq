@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./banner.scss";
-import logo from "../../images/logo.png";
+import banner from "../../images/banner.png";
 import Btn from "./btn";
 
 function Banner() {
@@ -8,7 +8,7 @@ function Banner() {
   const [isDeleting, setIsDeleting] = useState(false);
   const toRotate = [
     "Full-Stack Developer",
-    "Machine Learning Engineer",
+    "ML Engineer",
     "Software Engineer",
   ];
   const [text, setText] = useState("");
@@ -53,7 +53,7 @@ function Banner() {
       <div className="heading">
         <div className="intro">
           <h1>
-            {`Hi! I'm a Philippine based aspiring -`}
+            {`Hi! I'm a Philippine based aspiring `}
             <span className="wrap">{text}</span>
           </h1>
         </div>
@@ -66,7 +66,7 @@ function Banner() {
           <Btn></Btn>
       </div>
       <div className="my-logo">
-        <img src={logo} alt="logo" className="floating-image" />
+        <img src={banner} alt="logo" className="floating-image" />
       </div>
     </div>
   );

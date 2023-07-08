@@ -14,9 +14,10 @@
   background-color: $secondary-color;
   color: $text;
   padding-left: 20px;
+  height: 76vh;
 
   h1 {
-    font-size: 50px;
+    font-size: 70px;
     font: {
       family: $heading-font;
       weight: 800;
@@ -33,9 +34,14 @@
   }
 
   .heading {
-    max-width: 950px;
     display: flex;
+    flex: 60%;
     flex-direction: column;
+  }
+
+  .my-logo{
+    display: flex;
+    flex: 40%;
   }
 
   .description{
@@ -43,8 +49,9 @@
   }
 
   img {
-    width: 400px;
+    width: 500px;
     height: auto;
+    margin-top: -25%;
     transition: transform 0.8s ease-in-out;
   }
 
