@@ -1,0 +1,9 @@
+@import 'styles/variables';
+
+body{
+  text-align: center;
+  align-items: center;
+  margin: 0 auto;
+  background-color: $primary-color !important;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

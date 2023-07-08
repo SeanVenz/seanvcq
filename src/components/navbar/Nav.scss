@@ -1,0 +1,45 @@
+@import "../../styles/variables";
+
+.navigation {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  align-self: center;
+  text-align: center;
+  background-color: $secondary-color;
+
+  .link {
+    display: flex;
+    gap: 120px;
+    align-items: center;
+  }
+
+  a {
+    color: $text;
+    gap: 10px;
+    transition: transform 0.3s ease-in-out;
+    color: $text;
+    font: {
+      size: 12px;
+      weight: 800;
+    }
+    text: {
+      decoration: none;
+    }
+
+    &:hover {
+      text-decoration: underline;
+      transform: scale(1.5);
+    }
+  }
+
+  img {
+    width: 100px;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+
+    &:hover {
+      transform: scale(1.3);
+    }
+  }
+}

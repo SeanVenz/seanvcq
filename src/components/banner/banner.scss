@@ -1,0 +1,55 @@
+@import "../../styles/variables";
+
+.about {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 1500px;
+  justify-content: center;
+  border: 1px solid $accent;
+  margin: 0 auto;
+  margin-top: 20px;
+  border-radius: 40px;
+  background-color: $secondary-color;
+  color: $text;
+
+  h1 {
+    font-size: 64px;
+    font-weight: 800;
+  }
+
+  p{
+    font: {
+        size: 20px;
+    }
+    padding: 15px
+  }
+
+  .heading {
+    max-width: 950px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  img {
+    width: 400px;
+    height: auto;
+    transition: transform 0.8s ease-in-out;
+  }
+
+  .floating-image {
+    animation: floatingAnimation 5s ease-in-out infinite;
+  }
+
+  @keyframes floatingAnimation {
+    0% {
+      transform: translate(0, 0);
+    }
+    50% {
+      transform: translate(0, 20px);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+}
