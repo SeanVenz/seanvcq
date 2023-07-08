@@ -4,12 +4,7 @@ import user from "../../images/user.png";
 import telephone from "../../images/telephone-call.png";
 import bday from "../../images/date-of-birth.png";
 import email from "../../images/email.png";
-import poetry from "../../images/ink.png";
-import badminton from "../../images/shuttlecock.png";
-import eating from "../../images/cutlery.png";
-import motorRiding from "../../images/motorbike.png";
-import gaming from "../../images/gamer.png";
-import volleyball from "../../images/volleyball-ball.png";
+import Interests from "./interest";
 
 function About() {
   const contactData = [
@@ -19,14 +14,7 @@ function About() {
     { img: email, desc: "quijano.seanvenz@gmail.com", alt: "email" },
   ];
 
-  const interestStuff = [
-    { img: eating, desc: "Eating", alt: "eating" },
-    { img: poetry, desc: "Poetry", alt: "poetry" },
-    { img: motorRiding, desc: "Motorcycle Riding", alt: "motorRiding" },
-    { img: badminton, desc: "Badminton", alt: "badminton" },
-    { img: volleyball, desc: "Volleyball", alt: "volleyball" },
-    { img: gaming, desc: "Gaming", alt: "gaming" },
-  ];
+  
 
   return (
     <div className="about" id="about">
@@ -49,17 +37,6 @@ function About() {
             <div className="info" key={index}>
               <img src={contact.img} alt={contact.alt}></img>
               <p>{contact.desc}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-      <div className="interests">
-        <h4>Interests</h4>
-        <div className="stuff">
-          {interestStuff.map((intStuff, index) => (
-            <div className="info" key={index}>
-              <img src={intStuff.img} alt={intStuff.alt}></img>
-              <p>{intStuff.desc}</p>
             </div>
           ))}
         </div>
