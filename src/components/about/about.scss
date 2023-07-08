@@ -1,0 +1,49 @@
+@import "../../styles/variables";
+@import "../../styles/font";
+
+.about{
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 1140px;
+    align-items: center;
+    align-self: center;
+    padding-top: 50px;
+
+    h2{
+        font: {
+            family: $text-font;
+        }
+        color: $text;
+    }
+
+    .about-description{
+        display: flex;
+        flex-direction: row;
+        color: $text;
+        padding-top: 20px;
+
+        .description{
+            width: 55%;
+            font: {
+                font-family: $text-font;
+                size: 20px;
+            }
+        }
+
+        .contact{
+            width: 45%;
+        }
+
+        a {
+            img {
+                width: 32px;
+                height: auto;
+            }
+            .social-circle{
+                border-radius: 25px;
+            }
+        }
+    }
+}

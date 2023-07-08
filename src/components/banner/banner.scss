@@ -1,10 +1,11 @@
 @import "../../styles/variables";
+@import "../../styles/font";
 
-.about {
+.banner {
   display: flex;
   flex-direction: row;
   align-items: center;
-  width: 1500px;
+  width: 1140px;
   justify-content: center;
   border: 1px solid $accent;
   margin: 0 auto;
@@ -12,23 +13,33 @@
   border-radius: 40px;
   background-color: $secondary-color;
   color: $text;
+  padding-left: 20px;
 
   h1 {
-    font-size: 64px;
-    font-weight: 800;
+    font-size: 50px;
+    font: {
+      family: $heading-font;
+      weight: 800;
+    }
+    letter-spacing: 4.5px;
   }
 
   p{
     font: {
-        size: 20px;
+      size: 20px;
+      family: $text-font;
     }
-    padding: 15px
+    padding-top: 15px;
   }
 
   .heading {
     max-width: 950px;
     display: flex;
     flex-direction: column;
+  }
+
+  .description{
+    padding-bottom: 15px;
   }
 
   img {

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./banner.scss";
-import logo from '../../images/logo.png'
+import logo from "../../images/logo.png";
+import Btn from "./btn";
 
 function Banner() {
   const [loopNum, setLoopNum] = useState(0);
@@ -48,20 +49,24 @@ function Banner() {
   };
 
   return (
-    <div className="about">
+    <div className="banner" id="home">
       <div className="heading">
         <div className="intro">
           <h1>
-            {`Hi! I'm Sean Venz an aspiring -`}
+            {`Hi! I'm a Philippine based aspiring -`}
             <span className="wrap">{text}</span>
           </h1>
         </div>
         <div className="description">
-          <p>I'm currenly a 4th year Computer Science Student from Cebu Institute of Technology-University</p>
+          <p>
+            I'm currenly a 4th year Computer Science Student from Cebu Institute
+            of Technology-University
+          </p>
         </div>
+          <Btn></Btn>
       </div>
-      <div className="banner">
-        <img src={logo} alt="logo" className="floating-image"/>
+      <div className="my-logo">
+        <img src={logo} alt="logo" className="floating-image" />
       </div>
     </div>
   );
