@@ -1,71 +1,73 @@
 @import "../../styles/variables";
 @import "../../styles/font";
 
-.about {
-  margin: 0 auto;
+.interests {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
   text-align: center;
-  width: 1140px;
-  align-items: center;
-  align-self: center;
-  padding-top: 50px;
-
-  .info {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-  }
-
-  h3 {
-    font-family: $heading-font;
-    letter-spacing: 1px;
-  }
-
-  p {
-    font-family: $text-font;
-  }
+  padding-top: 40px;
 
   h2 {
     font: {
       family: $heading-font;
-      size: 40px;
     }
+    letter-spacing: 4px;
     color: $text;
-    letter-spacing: 3px;
   }
 
-  .about-description {
+  .interests-container {
     display: flex;
-    flex-direction: row;
-    color: $text;
-    padding-top: 20px;
-    // align-items: center;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+  }
 
-    .description {
-      width: 55%;
-      font: {
-        font-family: $text-font;
-        size: 20px;
-      }
-      letter-spacing: 1px;
-      align-items: center;
-      text-align: center;
-    }
+  .indiv-interest {
+    display: flex;
+    text-align: center;
+    justify-content: center;
 
-    .contact {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      justify-content: center;
-      padding-left: 10%;
-      width: 45%;
-      gap: 10px;
-    }
-    img {
+    .img-hover{
       width: 32px;
       height: 32px;
+      opacity: 1;
+    }
+
+    .left {
+      color: $text;
+      font: {
+        family: $text-font;
+        size: 60px;
+      }
+      letter-spacing: 2px;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: translateX(40px);
+        text-decoration: line-through;
+        text-decoration-thickness: 2px;
+      }
+
+      &:hover + .img-hover{
+        opacity: 0;
+      }
+    }
+
+    .right {
+      color: $text;
+      font: {
+        family: $text-font;
+        size: 60px;
+      }
+      letter-spacing: 2px;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: translateX(-40px);
+        text-decoration: line-through;
+        text-decoration-thickness: 2px;
+      }
     }
   }
 }
