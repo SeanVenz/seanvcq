@@ -4,7 +4,6 @@ import user from "../../images/user.png";
 import telephone from "../../images/telephone-call.png";
 import bday from "../../images/date-of-birth.png";
 import email from "../../images/email.png";
-import Interests from "./interest";
 
 function About() {
   const contactData = [

@@ -5,44 +5,40 @@ import eating from "../../images/cutlery.png";
 import motorRiding from "../../images/motorbike.png";
 import gaming from "../../images/gamer.png";
 import volleyball from "../../images/volleyball-ball.png";
-import './interest.scss'
+import "./interest.scss";
 
 function Interests() {
   return (
     <div className="interests">
-      <div className="interests-heading">
+      <div className="interest-heading">
         <h2>
-          <b>Interests</b>
+          <b>INTERESTS</b>
         </h2>
       </div>
-      <div className="interests-container">
-        <div className="column">
-          <div className="indiv-interest">
-            <img src={eating} alt="Eating" className="img-hover" />
-            <p className="left">EATING</p>
-          </div>
-          <div className="indiv-interest">
-            <img src={poetry} alt="Poetry" className="img-hover"/>
-            <p className="right">POETRY</p>
-          </div>
-          <div className="indiv-interest">
-            <img src={gaming} alt="Gaming" className="img-hover"/>
-            <p className="left">GAMING</p>
-          </div>
+      <div className="my-interests">
+        <div className="indiv-interest ">
+          <p className="int-desc left">EATING</p>
+          <img src={eating} alt="Eating" className="int-img" />
         </div>
-        <div className="column">
-          <div className="indiv-interest">
-            <img src={badminton} alt="Badminton" className="img-hover"/>
-            <p className="right">BADMINTON</p>
-          </div>
-          <div className="indiv-interest">
-            <img src={motorRiding} alt="Motorcycle Riding" className="img-hover"/>
-            <p className="left">MOTORCYCLE RIDING</p>
-          </div>
-          <div className="indiv-interest">
-            <img src={volleyball} alt="Volleyball" className="img-hover"/>
-            <p className="right">VOLLEYBALL</p>
-          </div>
+        <div className="indiv-interest ">
+          <p className="int-desc right">POETRY</p>
+          <img src={poetry} alt="Poetry" className="int-img" />
+        </div>
+        <div className="indiv-interest ">
+          <p className="int-desc left">GAMING</p>
+          <img src={gaming} alt="Gaming" className="int-img" />
+        </div>
+        <div className="indiv-interest ">
+          <p className="int-desc right">BADMINTON</p>
+          <img src={badminton} alt="Badminton" className="int-img" />
+        </div>
+        <div className="indiv-interest ">
+          <p className="int-desc left">VOLLEYBALL</p>
+          <img src={volleyball} alt="Volleyball" className="int-img" />
+        </div>
+        <div className="indiv-interest ">
+          <p className="int-desc right">MOTORCYCLE RIDING</p>
+          <img src={eating} alt="Eating" className="int-img" />
         </div>
       </div>
     </div>
