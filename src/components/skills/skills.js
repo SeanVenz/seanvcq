@@ -8,6 +8,11 @@ import java from '../../images/java.png'
 import c_logo from '../../images/C_Logo.png'
 import cplusplus from '../../images/c-.png'
 import python from '../../images/python.png'
+import docker from '../../images/docker.png'
+import firebase from '../../images/firebase.png'
+import dotnet from '../../images/NET_Core_Logo.png'
+import wordpress from '../../images/wordpress.png'
+import github from '../../images/git.png'
 
 function Skills() {
   const skillsData = [
@@ -25,10 +30,11 @@ function Skills() {
     {
       category: "Technologies",
       skills: [
-        { name: ".NET", proficiency: 75 },
-        { name: "Git and Github", proficiency: 75 },
-        { name: "Firebase", proficiency: 25 },
-        { name: "Docker", proficiency: 50 },
+        { name: ".NET", proficiency: 75, logo: dotnet },
+        { name: "Git and Github", proficiency: 75, logo: github },
+        { name: "Firebase", proficiency: 25, logo: firebase },
+        { name: "Docker", proficiency: 50, logo: docker },
+        { name: "Wordpress", proficiency: 50, logo: wordpress }
       ],
     },
   ];
@@ -56,6 +62,7 @@ function Skills() {
     <section className="skill" id="skills">
       <Container>
         <h2>Skills</h2>
+        <p>Here are the set of skills i have learned throughout my college journey, studying, and in my OJT. </p>
         {skillsData.map((category, index) => (
           <Row key={index}>
             <Col>
@@ -80,6 +87,7 @@ function Skills() {
                   ))}
                 </Carousel>
               </div>
+              <div className="spacer"></div>
             </Col>
           </Row>
         ))}

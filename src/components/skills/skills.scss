@@ -13,8 +13,21 @@
   );
   padding-top: 50px;
 
+  p{
+    font: {
+      family: $text-font;
+    }
+    // color: $text;
+  }
+
   .skill-bx {
     height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    text-align: center;
+    min-height: 200px;
   }
 
   h2 {
@@ -23,35 +36,43 @@
       family: $heading-font;
       weight: 800;
     }
-    color: $text;
-  }
-}
-
-.item {
-  position: relative;
-  text-align: center;
-  display: flex; // add flex
-  flex-direction: column; // make the content stack vertically
-  align-items: center; // center items horizontally
-
-  img {
-    width: 50px;
-    height: 75px;
-    padding-bottom: 20px;
+    // color: $text;
   }
 
-  .skill-progress {
-    background-color: #f0f0f0;
-    height: 10px; // make the progress bar thinner
-    border-radius: 2px;
-    overflow: hidden;
-    margin-top: 0.5rem;
-    width: 300px;
-
-    .progress-bar {
-      height: 100%;
-      background: linear-gradient(to right, #34e89e, #0f3443); // apply gradient
+  .item {
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    text-align: center;
+  
+    img {
+      width: 75px;
+      height: auto;
+      padding-bottom: 20px;
+    }
+  
+    .skill-progress {
+      background-color: #f0f0f0;
+      height: 10px; // make the progress bar thinner
       border-radius: 2px;
+      overflow: hidden;
+      margin-top: 0.5rem;
+      width: 300px;
+  
+      .progress-bar {
+        height: 100%;
+        background: linear-gradient(to right, #34e89e, #0f3443); // apply gradient
+        border-radius: 2px;
+      }
     }
   }
+
+  .spacer{
+    padding-top: 40px;
+  }
 }
+
+
