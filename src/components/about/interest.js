@@ -12,33 +12,33 @@ function Interests() {
     <div className="interests">
       <div className="interest-heading">
         <h2>
-          <b>INTERESTS</b>
+          <b>- interests -</b>
         </h2>
       </div>
       <div className="my-interests">
-        <div className="indiv-interest ">
-          <p className="int-desc left">EATING</p>
-          <img src={eating} alt="Eating" className="int-img" />
+        <div className="left indiv-interest">
+          <p>EATING</p>
+          <img src={eating} alt="Eating" />
         </div>
-        <div className="indiv-interest ">
-          <p className="int-desc right">POETRY</p>
-          <img src={poetry} alt="Poetry" className="int-img" />
+        <div className="right indiv-interest">
+          <p>GAMING</p>
+          <img src={gaming} alt="Gaming" />
         </div>
-        <div className="indiv-interest ">
-          <p className="int-desc left">GAMING</p>
-          <img src={gaming} alt="Gaming" className="int-img" />
+        <div className="left indiv-interest">
+          <p>POETRY</p>
+          <img src={poetry} alt="Poetry" />
         </div>
-        <div className="indiv-interest ">
-          <p className="int-desc right">BADMINTON</p>
-          <img src={badminton} alt="Badminton" className="int-img" />
+        <div className="right indiv-interest">
+          <p>BADMINTON</p>
+          <img src={badminton} alt="Badminton" />
         </div>
-        <div className="indiv-interest ">
-          <p className="int-desc left">VOLLEYBALL</p>
-          <img src={volleyball} alt="Volleyball" className="int-img" />
+        <div className="left indiv-interest">
+          <p>VOLLEYBALL</p>
+          <img src={volleyball} alt="Volleyball" />
         </div>
-        <div className="indiv-interest ">
-          <p className="int-desc right">MOTORCYCLE RIDING</p>
-          <img src={eating} alt="Eating" className="int-img" />
+        <div className="right indiv-interest">
+          <p>MOTORCYCLE RIDING</p>
+          <img src={motorRiding} alt="Motorcycle-Riding" />
         </div>
       </div>
     </div>

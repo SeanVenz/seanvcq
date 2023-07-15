@@ -2,18 +2,24 @@ import { Row, Col, Container } from "react-bootstrap";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import "./skills.scss";
+import cSharp from '../../images/c-sharp.png'
+import javascript from '../../images/js.png'
+import java from '../../images/java.png'
+import c_logo from '../../images/C_Logo.png'
+import cplusplus from '../../images/c-.png'
+import python from '../../images/python.png'
 
 function Skills() {
   const skillsData = [
     {
       category: "Programming Languages",
       skills: [
-        { name: "C#", proficiency: 75 },
-        { name: "JavaScript", proficiency: 50 },
-        { name: "Java", proficiency: 50 },
-        { name: "C", proficiency: 50 },
-        { name: "C++", proficiency: 50 },
-        { name: "Python", proficiency: 25 },
+        { name: "C#", proficiency: 20, logo: cSharp },
+        { name: "JavaScript", proficiency: 50, logo: javascript },
+        { name: "Java", proficiency: 50, logo: java },
+        { name: "C", proficiency: 50, logo: c_logo },
+        { name: "C++", proficiency: 50, logo: cplusplus },
+        { name: "Python", proficiency: 25, logo: python  },
       ],
     },
     {
@@ -49,7 +55,7 @@ function Skills() {
   return (
     <section className="skill" id="skills">
       <Container>
-      <h2>Skills</h2>
+        <h2>Skills</h2>
         {skillsData.map((category, index) => (
           <Row key={index}>
             <Col>
@@ -62,8 +68,8 @@ function Skills() {
                 >
                   {category.skills.map((skill, idx) => (
                     <div key={idx} className="item">
-                      <img src={skill.proficiency} alt={skill.name} />
-                      <h5>{skill.name}</h5>
+                      <img src={skill.logo} alt={skill.name} />
+                      {/* <h5>{skill.name}</h5> */}
                       <div className="skill-progress">
                         <div
                           className="progress-bar"

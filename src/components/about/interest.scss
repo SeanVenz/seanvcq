@@ -17,56 +17,52 @@
     color: $text;
   }
 
-  .my-interests {
+  .my-interests{
     display: flex;
     justify-content: center;
-    flex-wrap: wrap; /* Allow items to wrap within the container */
+    flex-direction: column;
+    text-align: center;
   }
 
-  .indiv-interest {
+  .indiv-interest{
     display: flex;
-    align-items: center;
-    flex-direction: column; /* Stack items vertically */
-    margin: 10px; /* Add margin for spacing */
-    flex: 1 0 100%; /* Each interest takes full width */
+    justify-content: center;
+
+    p{
+      font: {
+        family: $text-font;
+        size: 70px
+      }
+      color: $text;
+      transition: transform 0.5s ease;
+      order: 0;
+    }
+
+    img{
+      display: none;
+      transition: display 0.5s ease;
+      order: 1; 
+    }
+
+    &:hover img{
+      display: block;
+    }
   }
 
-  p {
-    color: $text;
-    font-family: $text-font;
-    font-size: 50px;
-    transition: transform 0.3s ease;
-    margin: 0; /* Remove default margin for paragraphs */
-    cursor: pointer; /* Add cursor pointer on hover */
+  .left{
+    &:hover p{
+      transform: translateX(-20px);
+    }
   }
 
-  .int-desc.left:hover {
-    transform: translateX(-30px);
-    text-decoration: line-through;
-    text-decoration-thickness: 2px;
-  }
+  .right{
+    &:hover p{
+      transform: translateX(20px);
+      order: 2; 
+    }
 
-  .int-desc.left:hover + .int-img {
-    transform: translateX(30px);
-  }
-
-  .int-desc.right:hover {
-    transform: translateX(30px);
-    text-decoration: line-through;
-    text-decoration-thickness: 2px;
-  }
-
-  .int-desc.right:hover + .int-img {
-    transform: translateX(-30px);
-  }
-
-  .int-desc:hover + .int-img {
-    display: inline-block;
-    // margin-top: 10px; /* Add margin to separate image from paragraph */
-  }
-
-  .int-img {
-    display: none;
-    transition: transform 0.3s ease;
+    &:hover img {
+      order: 1;
+    }
   }
 }
