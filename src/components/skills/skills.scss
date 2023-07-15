@@ -1,14 +1,19 @@
 @import "../../styles/variables";
-@import "../../styles/font"; 
+@import "../../styles/font";
 
 .skill {
   display: flex;
   justify-content: center;
   text-align: center;
   padding-top: 40px;
-  background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+  background: linear-gradient(
+    0deg,
+    rgba(34, 193, 195, 1) 0%,
+    rgba(253, 187, 45, 1) 100%
+  );
+  padding-top: 50px;
 
-  .skill-bx{
+  .skill-bx {
     height: 200px;
   }
 
@@ -25,6 +30,9 @@
 .item {
   position: relative;
   text-align: center;
+  display: flex; // add flex
+  flex-direction: column; // make the content stack vertically
+  align-items: center; // center items horizontally
 
   img {
     width: 50px;
@@ -34,15 +42,16 @@
 
   .skill-progress {
     background-color: #f0f0f0;
-    height: 8px;
-    border-radius: 4px;
+    height: 10px; // make the progress bar thinner
+    border-radius: 2px;
     overflow: hidden;
     margin-top: 0.5rem;
+    width: 300px;
 
     .progress-bar {
       height: 100%;
-      background-color: #007bff;
-      border-radius: 4px;
+      background: linear-gradient(to right, #34e89e, #0f3443); // apply gradient
+      border-radius: 2px;
     }
   }
 }
