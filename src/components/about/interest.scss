@@ -6,6 +6,7 @@
   justify-content: center;
   text-align: center;
   padding-top: 40px;
+  padding-bottom: 40px;
   flex-direction: column;
 
   h2 {
@@ -27,25 +28,37 @@
   .indiv-interest{
     display: flex;
     justify-content: center;
+    margin-left: 150px;
 
     p{
       font: {
         family: $text-font;
-        size: 70px
+        size: 60px
       }
       color: $text;
       transition: transform 0.5s ease;
       order: 0;
+
+      &:hover{
+        text-decoration: line-through;
+        text-decoration-thickness: 2px;
+      }
     }
 
     img{
-      display: none;
-      transition: display 0.5s ease;
+      // display: none;
+      visibility: hidden;
+      opacity: 0;
+      width: 150px;
+      height: auto;
+      transition: opacity 0.5s ease, visibility 0.5s ease;
       order: 1; 
     }
 
     &:hover img{
-      display: block;
+      opacity: 1;
+      visibility: visible;
+      // display: block;
     }
   }
 

@@ -1,10 +1,10 @@
 import React from "react";
-import poetry from "../../images/ink.png";
-import badminton from "../../images/shuttlecock.png";
-import eating from "../../images/cutlery.png";
-import motorRiding from "../../images/motorbike.png";
-import gaming from "../../images/gamer.png";
-import volleyball from "../../images/volleyball-ball.png";
+import poetry from "../../images/poetry.jpg";
+import badminton from "../../images/badminton.jpg";
+import eating from "../../images/eating.jpg";
+import motorRiding from "../../images/motorcylce.jpg";
+import gaming from "../../images/gaming.jpg";
+import volleyball from "../../images/volleyball.jpg";
 import "./interest.scss";
 
 function Interests() {
