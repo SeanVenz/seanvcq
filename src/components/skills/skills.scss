@@ -28,6 +28,7 @@
     align-self: center;
     text-align: center;
     min-height: 200px;
+    background-color: $accent;
   }
 
   h2 {
@@ -36,9 +37,11 @@
       family: $heading-font;
       weight: 800;
     }
-    // color: $text;
   }
 
+  h4{
+    padding-bottom: 20px;
+  }
   .item {
     position: relative;
     text-align: center;
@@ -50,7 +53,7 @@
   
     img {
       width: 75px;
-      height: auto;
+      height: 100px;
       padding-bottom: 20px;
     }
   
