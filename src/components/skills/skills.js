@@ -38,7 +38,7 @@ function Skills() {
     {
       category: "Programming Languages",
       skills: [
-        { name: "C#", proficiency: 75, logo: cSharp },
+        { name: "C#", proficiency: 100, logo: cSharp },
         { name: "JavaScript", proficiency: 50, logo: javascript },
         { name: "Java", proficiency: 50, logo: java },
         { name: "C", proficiency: 50, logo: c_logo },
