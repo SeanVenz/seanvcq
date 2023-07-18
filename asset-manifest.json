@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/quijano-portfolio/static/css/main.2eb07e0d.css",
-    "main.js": "/quijano-portfolio/static/js/main.9792bc60.js",
+    "main.css": "/quijano-portfolio/static/css/main.89c91448.css",
+    "main.js": "/quijano-portfolio/static/js/main.d3ca7c0d.js",
     "static/media/banner.png": "/quijano-portfolio/static/media/banner.1f3fc675d54478df9621.png",
     "static/media/logo.png": "/quijano-portfolio/static/media/logo.86497d58b824342e4ec2.png",
     "static/media/docker.png": "/quijano-portfolio/static/media/docker.69ff44dfe7fe66489a99.png",
@@ -12,11 +12,11 @@
     "static/media/C_Logo.png": "/quijano-portfolio/static/media/C_Logo.a8fe2b24f163fede1d59.png",
     "static/media/python.png": "/quijano-portfolio/static/media/python.6a5cbc319ab3ddf8ef92.png",
     "static/media/volleyball.jpg": "/quijano-portfolio/static/media/volleyball.9c8fe46e930ea96f94c1.jpg",
+    "static/media/interpreter.jpg": "/quijano-portfolio/static/media/interpreter.2f7fdeb7d5f557435a0c.jpg",
     "static/media/c-sharp.png": "/quijano-portfolio/static/media/c-sharp.4a32f53d425c7ad4cb05.png",
     "static/media/c-.png": "/quijano-portfolio/static/media/c-.24a8f93854ab092f17a7.png",
     "static/media/gaming.jpg": "/quijano-portfolio/static/media/gaming.d1d5f7f1e8dee81a080c.jpg",
     "static/media/react.png": "/quijano-portfolio/static/media/react.cb383f7be127b0183272.png",
-    "static/media/git.png": "/quijano-portfolio/static/media/git.80b14421254da35fc608.png",
     "static/media/java.png": "/quijano-portfolio/static/media/java.f5dd86c3ef6ef3f85acf.png",
     "static/media/badminton.jpg": "/quijano-portfolio/static/media/badminton.9981e3e98aaa059d0987.jpg",
     "static/media/firebase.png": "/quijano-portfolio/static/media/firebase.9cb44a5c305f7c52c6f7.png",
@@ -26,11 +26,11 @@
     "static/media/js.png": "/quijano-portfolio/static/media/js.3dfb665e058d08c99f28.png",
     "static/media/revicons.woff": "/quijano-portfolio/static/media/revicons.e8746a624ed098489406.woff",
     "index.html": "/quijano-portfolio/index.html",
-    "main.2eb07e0d.css.map": "/quijano-portfolio/static/css/main.2eb07e0d.css.map",
-    "main.9792bc60.js.map": "/quijano-portfolio/static/js/main.9792bc60.js.map"
+    "main.89c91448.css.map": "/quijano-portfolio/static/css/main.89c91448.css.map",
+    "main.d3ca7c0d.js.map": "/quijano-portfolio/static/js/main.d3ca7c0d.js.map"
   },
   "entrypoints": [
-    "static/css/main.2eb07e0d.css",
-    "static/js/main.9792bc60.js"
+    "static/css/main.89c91448.css",
+    "static/js/main.d3ca7c0d.js"
   ]
 }
