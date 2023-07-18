@@ -79,7 +79,7 @@ function Skills() {
   };
 
   return (
-    <section className="skill" id="skills">
+    <section className={`skill ${isVisible ? 'visible' : ''}`} id="skills">
       <Container>
         <h2>Skills</h2>
         <p>

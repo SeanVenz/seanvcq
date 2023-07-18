@@ -1,0 +1,27 @@
+@import "../../styles/variables";
+@import "../../styles/font";
+
+.projects{
+    background-color: $complement;
+    display: flex;
+    flex-direction: column;
+    padding-top: 40px;
+    justify-content: center;
+    text-align: left;
+    align-items: center;
+
+    .projects-heading{
+        display: flex;
+        padding-left: 40px;
+    }
+
+    .desc{
+        display: flex;
+        width: 60%;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+}
