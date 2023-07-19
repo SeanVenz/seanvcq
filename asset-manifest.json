@@ -1,8 +1,12 @@
 {
   "files": {
-    "main.css": "/quijano-portfolio/static/css/main.89c91448.css",
-    "main.js": "/quijano-portfolio/static/js/main.d3ca7c0d.js",
+    "main.css": "/quijano-portfolio/static/css/main.2f47b71b.css",
+    "main.js": "/quijano-portfolio/static/js/main.0df51a46.js",
     "static/media/banner.png": "/quijano-portfolio/static/media/banner.1f3fc675d54478df9621.png",
+    "static/media/barangay-reg.png": "/quijano-portfolio/static/media/barangay-reg.0b37353a71952b0b8364.png",
+    "static/media/cofee-shop.jpg": "/quijano-portfolio/static/media/cofee-shop.c4baf62d8dda6027e0e2.jpg",
+    "static/media/car-rental.jpg": "/quijano-portfolio/static/media/car-rental.1e8f149fbe29b210bb40.jpg",
+    "static/media/identity.jpg": "/quijano-portfolio/static/media/identity.247712a9404b3dfe59c5.jpg",
     "static/media/logo.png": "/quijano-portfolio/static/media/logo.86497d58b824342e4ec2.png",
     "static/media/docker.png": "/quijano-portfolio/static/media/docker.69ff44dfe7fe66489a99.png",
     "static/media/NET_Core_Logo.png": "/quijano-portfolio/static/media/NET_Core_Logo.a10a4f42b4a18f594def.png",
@@ -26,11 +30,12 @@
     "static/media/js.png": "/quijano-portfolio/static/media/js.3dfb665e058d08c99f28.png",
     "static/media/revicons.woff": "/quijano-portfolio/static/media/revicons.e8746a624ed098489406.woff",
     "index.html": "/quijano-portfolio/index.html",
-    "main.89c91448.css.map": "/quijano-portfolio/static/css/main.89c91448.css.map",
-    "main.d3ca7c0d.js.map": "/quijano-portfolio/static/js/main.d3ca7c0d.js.map"
+    "static/media/arrow-right-top.svg": "/quijano-portfolio/static/media/arrow-right-top.0e938dbba17b3bba8c6439b7311497de.svg",
+    "main.2f47b71b.css.map": "/quijano-portfolio/static/css/main.2f47b71b.css.map",
+    "main.0df51a46.js.map": "/quijano-portfolio/static/js/main.0df51a46.js.map"
   },
   "entrypoints": [
-    "static/css/main.89c91448.css",
-    "static/js/main.d3ca7c0d.js"
+    "static/css/main.2f47b71b.css",
+    "static/js/main.0df51a46.js"
   ]
 }
