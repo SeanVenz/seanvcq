@@ -1,27 +1,42 @@
 @import "../../styles/variables";
 @import "../../styles/font";
 
-.projects{
-    background-color: $complement;
+.projects {
+  background-color: $complement;
+  display: flex;
+  flex-direction: column;
+  padding-top: 40px;
+  justify-content: center;
+  align-items: center;
+
+  .projects-heading {
     display: flex;
-    flex-direction: column;
-    padding-top: 40px;
+    padding-left: 40px;
+
+    h2 {
+        font: {
+            family: $heading-font;
+            size: 40px;
+        }
+        letter-spacing: 5px;
+    }
+  }
+
+  .desc {
+    display: flex;
+    width: 60%;
+    text-align: center;
     justify-content: center;
-    text-align: left;
     align-items: center;
-
-    .projects-heading{
-        display: flex;
-        padding-left: 40px;
+    font: {
+        family: $text-font;
     }
-
-    .desc{
-        display: flex;
-        width: 60%;
-        text-align: center;
-        justify-content: center;
-        align-items: center;
-    }
-
-
+  }
+  .my-projects {
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }

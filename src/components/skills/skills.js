@@ -24,15 +24,19 @@ function Skills() {
     const checkIfVisible = () => {
       const section = document.getElementById('skills');
       const rect = section.getBoundingClientRect();
-      const isVisible = rect.top < window.innerHeight && rect.bottom >= 0;
-
-      setIsVisible(isVisible);
+      const newIsVisible = rect.top < window.innerHeight && rect.bottom >= 0;
+  
+      if (!isVisible && newIsVisible) {
+        setIsVisible(newIsVisible);
+      }
     };
-
+  
     window.addEventListener('scroll', checkIfVisible);
-
+  
     return () => window.removeEventListener('scroll', checkIfVisible);
-  }, []);
+  }, [isVisible]); // Include isVisible in the dependency array
+  
+
 
   const skillsData = [
     {

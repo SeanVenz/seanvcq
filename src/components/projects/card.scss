@@ -1,9 +1,14 @@
+@import "../../styles/variables";
+@import "../../styles/font";
+
 .card {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
-  cursor: pointer;
+  width: 400px;
+  height: auto;
+  border-radius: 20px;
+  background-color: $complement;
+  border: none;
 
   .image-container {
     position: relative;
@@ -12,6 +17,8 @@
     img {
       width: 100%;
       transition: 0.3s ease;
+      height: 250px;
+      background-size: cover;
     }
 
     .overlay {
@@ -20,28 +27,70 @@
       bottom: 0;
       left: 0;
       right: 0;
-      background: rgba(0, 0, 0, 0.7);
+      background: rgba(0, 0, 0, 0.8);
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
       opacity: 0;
       transition: opacity 0.3s ease;
-
-      p {
-        color: white;
-        padding: 20px;
-        font-size: 16px;
-      }
-    }
-
-    &:hover {
-      .overlay {
-        opacity: 1;
-      }
     }
   }
 
-  h3 {
-    margin-top: 15px;
+  &:hover {
+    .overlay {
+      opacity: 1;
+    }
+  }
+
+  ul li {
+    color: white;
+    text-align: left;
+    font: {
+      family: $text-font;
+    }
+  }
+
+  .proj-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    h3 {
+      padding-top: 10px;
+      font: {
+        family: $text-font;
+        weight: 700;
+        size: 25px;
+      }
+      display: flex;
+      align-items: center;
+    }
+
+    .arrow-icon {
+      position: relative;
+      height: 30px;
+      width: auto;
+      opacity: 0.5;
+      transition: transform 0.3s, opacity 0.3s;
+
+      &.hover {
+        opacity: 0;
+        transform: translate(-30px, 30px);
+        margin-left: -30px
+      }
+    }
+
+    
+  }
+  &:hover .arrow-icon:not(.hover) {
+    opacity: 0;
+    transform: translate(30px, -30px);
+  }
+
+  &:hover .arrow-icon.hover {
+    opacity: 1;
+    margin-left: -30px;
+    transform: translateX(0px);
   }
 }
