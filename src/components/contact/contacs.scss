@@ -1,0 +1,19 @@
+@import "../../styles/variables";
+@import "../../styles/font";
+
+.contact-me{
+    background-color: $complement;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+
+    .contact-me-container{
+        display: flex;
+        width: 90%;
+        justify-content: center;
+        align-items: center;
+        background-color: $secondary-color;
+        border-radius: 20px;
+        border: solid 1px $accent
+    }
+}

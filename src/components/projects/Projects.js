@@ -6,6 +6,8 @@ import coffeeshop from '../../images/cofee-shop.jpg'
 import barangayApp from '../../images/barangay-reg.png'
 import ProjectCard from "./ProjectCard";
 import carRental from '../../images/car-rental.jpg'
+import careerAI from '../../images/careerAI.png'
+import meanTemp from '../../images/meantemp.jpg'
 
 function Projects() {
   const projects = [
@@ -17,7 +19,17 @@ function Projects() {
     {
       name: "Family Registration App",
       img: barangayApp,
-      points: ["Made using C# and React", "Can Register, Update, and Delete Family, Barangays and Family Members.", "Complete Front-End, Back-End, SQL Database, and Unit Testing"]
+      points: ["Made using C# and ReactJS", "Can Register, Update, and Delete Family, Barangays and Family Members.", "Complete Front-End, Back-End, SQL Database, and Unit Testing"]
+    },
+    {
+      name: "CareerAI",
+      img: careerAI,
+      points: ["Made using C# and ReactJS", "Uses ML .NET", "Was trained using 6k rows and 20 columns of dataset", "Can predict your Career based on your knowledge on IT Fields"]
+    },
+    {
+      name: "Mean Temperature Prediction",
+      img: meanTemp,
+      points: ["Made using C#", "Uses Backpropagation Algorithm", "Can predict annual temperature based on Carbon Dioxide Emission"]
     },
     {
       name: "Coffee Shop API",

@@ -7,6 +7,7 @@ import About from './components/about/about';
 import Skills from './components/skills/skills';
 import Interests from './components/about/interest';
 import Projects from './components/projects/Projects';
+import Contact from './components/contact/Contact';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Interests></Interests>
       <Skills></Skills>
       <Projects></Projects>
+      <Contact></Contact>
     </div>
   );
 }
