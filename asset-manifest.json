@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/quijano-portfolio/static/css/main.f383ae90.css",
-    "main.js": "/quijano-portfolio/static/js/main.a94b8d13.js",
+    "main.css": "/quijano-portfolio/static/css/main.86c2ca10.css",
+    "main.js": "/quijano-portfolio/static/js/main.e08965c2.js",
     "static/media/banner.png": "/quijano-portfolio/static/media/banner.1f3fc675d54478df9621.png",
     "static/media/barangay-reg.png": "/quijano-portfolio/static/media/barangay-reg.0b37353a71952b0b8364.png",
     "static/media/cofee-shop.jpg": "/quijano-portfolio/static/media/cofee-shop.c4baf62d8dda6027e0e2.jpg",
@@ -33,11 +33,11 @@
     "static/media/revicons.woff": "/quijano-portfolio/static/media/revicons.e8746a624ed098489406.woff",
     "index.html": "/quijano-portfolio/index.html",
     "static/media/arrow-right-top.svg": "/quijano-portfolio/static/media/arrow-right-top.0e938dbba17b3bba8c6439b7311497de.svg",
-    "main.f383ae90.css.map": "/quijano-portfolio/static/css/main.f383ae90.css.map",
-    "main.a94b8d13.js.map": "/quijano-portfolio/static/js/main.a94b8d13.js.map"
+    "main.86c2ca10.css.map": "/quijano-portfolio/static/css/main.86c2ca10.css.map",
+    "main.e08965c2.js.map": "/quijano-portfolio/static/js/main.e08965c2.js.map"
   },
   "entrypoints": [
-    "static/css/main.f383ae90.css",
-    "static/js/main.a94b8d13.js"
+    "static/css/main.86c2ca10.css",
+    "static/js/main.e08965c2.js"
   ]
 }
