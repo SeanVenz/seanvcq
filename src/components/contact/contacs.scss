@@ -7,6 +7,18 @@
     justify-content: center;
     flex-direction: row;
 
+    h2{
+        font: {
+            family: $heading-font
+        }
+        color: $text
+    }
+
+    .my-form{
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
     .contact-me-container{
         display: flex;
         width: 90%;
@@ -14,7 +26,8 @@
         align-items: center;
         background-color: $secondary-color;
         border-radius: 20px;
-        border: solid 1px $accent
+        border: solid 1px $accent;
+        gap: 20px;
     }
 
     span{

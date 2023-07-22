@@ -14,7 +14,7 @@ function Projects() {
     {
       name: "Interpreter",
       img: interpreter,
-      points: ["Made using ANTLR and C#", "Has complete functionalities like loop, switch, and conditional statements."]
+      points: ["Made using ANTLR and C#", "Follows CODE Interpreter guidelines set by Professor", "Has complete functionalities like loop, switch, and conditional statements."]
     },
     {
       name: "Family Registration App",
