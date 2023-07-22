@@ -34,7 +34,7 @@ function Skills() {
     window.addEventListener('scroll', checkIfVisible);
   
     return () => window.removeEventListener('scroll', checkIfVisible);
-  }, [isVisible]); // Include isVisible in the dependency array
+  }, [isVisible]);
   
 
 
@@ -102,12 +102,7 @@ function Skills() {
                 >
                   {category.skills.map((skill, idx) => (
                     <div key={idx} className="item">
-                      {/* <div className="image-wrapper"> */}
                         <img src={skill.logo} alt={skill.name} />
-                        {/* <div className="overlay"> */}
-                          {/* <h5>{skill.name}</h5> */}
-                        {/* </div> */}
-                      {/* </div> */}
                       <div className="skill-progress">
                         <div
                           className={`progress-bar ${isVisible ? 'animate' : ''}`}

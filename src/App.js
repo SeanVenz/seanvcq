@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import './App.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
@@ -11,16 +12,17 @@ import Contact from './components/contact/Contact';
 import Footer from './components/footer/Footer';
 
 function App() {
+  const [backgroundChanged, setBackgroundChanged] = useState(false);
   return (
     <div className="App">
       <Navigation></Navigation>
       <Banner></Banner>
       <About></About>
       <Interests></Interests>
-      <Skills></Skills>
-      <Projects></Projects>
-      <Contact></Contact>
-      <Footer></Footer>
+      <Skills  />
+      <Projects  />
+      <Contact />
+      <Footer/>
     </div>
   );
 }

@@ -3,6 +3,7 @@
 
 .my-footer{
     background-color: $primary-color;
+    transition: background-color 2s ease;
     p{
         text-align: center;
         font: {
