@@ -1,36 +1,53 @@
 @import "../../styles/variables";
 @import "../../styles/font";
 
-.contact-me{
-    background-color: $complement;
+.contact-me {
+  background-color: $complement;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  h2 {
+    font: {
+      family: $heading-font;
+      size: 50px;
+    }
+    letter-spacing: 4px;
+    color: $text;
+  }
+
+  .my-form {
+    padding-top: 20px;
+    padding-bottom: 20px;
     display: flex;
+    justify-content: left;
+    align-items: end;
+  }
+
+  .contact-left {
+    display: flex;
+    flex-direction: column; 
+    gap: 20px;
+  }
+
+  .contact-me-container {
+    display: flex;
+    width: 90%;
     justify-content: center;
-    flex-direction: row;
+    align-items: center;
+    background-color: $secondary-color;
+    border-radius: 20px;
+    border: solid 1px $accent;
+    gap: 50px;
+  }
 
-    h2{
-        font: {
-            family: $heading-font
-        }
-        color: $text
+  span {
+    color: $text;
+    letter-spacing: 0.5px;
+    font: {
+        size: 18px;
     }
-
-    .my-form{
-        padding-top: 20px;
-        padding-bottom: 20px;
-    }
-
-    .contact-me-container{
-        display: flex;
-        width: 90%;
-        justify-content: center;
-        align-items: center;
-        background-color: $secondary-color;
-        border-radius: 20px;
-        border: solid 1px $accent;
-        gap: 20px;
-    }
-
-    span{
-        color: $text;
-    }
+  }
 }

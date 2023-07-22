@@ -1,0 +1,15 @@
+@import "../../styles/variables";
+@import "../../styles/font";
+
+.my-footer{
+    background-color: $primary-color;
+    p{
+        text-align: center;
+        font: {
+            size: 14px;
+        }
+        color: $complement;
+        margin: 0;
+        padding: 0;
+    }
+}

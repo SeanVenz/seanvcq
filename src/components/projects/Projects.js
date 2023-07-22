@@ -49,7 +49,7 @@ function Projects() {
   ];
 
   return (
-    <div className="projects">
+    <div className="projects" id="projects">
       <div className="projects-heading">
         <h2>Projects</h2>
       </div>

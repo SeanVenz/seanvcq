@@ -26,6 +26,10 @@ function ContactForm() {
           <input type="text" id="email" name="email" required="" />
         </div>
         <div className="form-group">
+          <label htmlFor="subject">Subject</label>
+          <input type="text" id="subject" name="subject" required="" />
+        </div>
+        <div className="form-group">
           <label htmlFor="textarea">How Can I Help You?</label>
           <textarea
             name="textarea"
