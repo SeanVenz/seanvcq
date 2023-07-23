@@ -16,6 +16,14 @@
   padding-left: 20px;
   height: 76vh;
 
+  ::before {
+    content: '';
+    display: block;
+    height: 200px; /* The height of your navbar */
+    margin: -200px 0 0; /* Negative value of height */
+    visibility: hidden;
+  }
+
   h1 {
     font-size: 70px;
     font: {
