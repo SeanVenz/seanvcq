@@ -1,18 +1,27 @@
 @import 'styles/variables';
 
-body{
+body {
   text-align: center;
   align-items: center;
   margin: 0 auto;
   background-color: $primary-color !important;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
+  overflow-x: hidden;
 
-.hide {
-  display: none;
-}
+  &::-webkit-scrollbar {
+    width: 10px; // Set the width of the scrollbar
+  }
 
-.myDIV:hover + .hide {
-  display: block;
-  color: red;
+  &::-webkit-scrollbar-track {
+    background: #FFF; // Set the background color of the track
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #000; // Set the color of the scroll thumb
+    border-radius: 5px; // Optional, you can add border-radius to make it round.
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: #606060; // Change color when user hovers over the scroll thumb
+  }
 }
