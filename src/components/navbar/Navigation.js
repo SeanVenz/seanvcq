@@ -16,9 +16,9 @@ function Navigation() {
   return (
     <div className="navigation">
       <div className="link">
-        <a href="#">HOME</a>
+        <a href="#home">HOME</a>
         <a href="#about">ABOUT ME</a>
-        <a href="#">
+        <a href="#home">
           <img src={logo} alt="logo" style={{height: scrollPosition > 200 ? '50px' : '100px', width: scrollPosition > 200 ? '50px' : '100px'}} />
         </a>
         <a href="#skills">SKILLS</a>
