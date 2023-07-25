@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/seanvenz.github.io/static/css/main.eb32a72e.css",
-    "main.js": "/seanvenz.github.io/static/js/main.a9975314.js",
+    "main.js": "/seanvenz.github.io/static/js/main.22c65d86.js",
     "static/media/banner.png": "/seanvenz.github.io/static/media/banner.1f3fc675d54478df9621.png",
     "static/media/barangay-reg.png": "/seanvenz.github.io/static/media/barangay-reg.0b37353a71952b0b8364.png",
     "static/media/cofee-shop.jpg": "/seanvenz.github.io/static/media/cofee-shop.c4baf62d8dda6027e0e2.jpg",
@@ -34,10 +34,10 @@
     "index.html": "/seanvenz.github.io/index.html",
     "static/media/arrow-right-top.svg": "/seanvenz.github.io/static/media/arrow-right-top.0e938dbba17b3bba8c6439b7311497de.svg",
     "main.eb32a72e.css.map": "/seanvenz.github.io/static/css/main.eb32a72e.css.map",
-    "main.a9975314.js.map": "/seanvenz.github.io/static/js/main.a9975314.js.map"
+    "main.22c65d86.js.map": "/seanvenz.github.io/static/js/main.22c65d86.js.map"
   },
   "entrypoints": [
     "static/css/main.eb32a72e.css",
-    "static/js/main.a9975314.js"
+    "static/js/main.22c65d86.js"
   ]
 }
