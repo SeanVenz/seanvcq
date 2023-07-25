@@ -28,7 +28,7 @@ function Interests() {
           scale: 1.0,
           scaleMobile: 1.0,
           backgroundAlpha: 0.00,
-          points: 4.00
+          points: 5.00
         })
       );
     }
