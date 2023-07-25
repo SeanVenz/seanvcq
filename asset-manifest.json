@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/quijano-portfolio/static/css/main.569d86a5.css",
-    "main.js": "/quijano-portfolio/static/js/main.f33c2748.js",
+    "main.js": "/quijano-portfolio/static/js/main.78872b29.js",
     "static/media/banner.png": "/quijano-portfolio/static/media/banner.1f3fc675d54478df9621.png",
     "static/media/barangay-reg.png": "/quijano-portfolio/static/media/barangay-reg.0b37353a71952b0b8364.png",
     "static/media/cofee-shop.jpg": "/quijano-portfolio/static/media/cofee-shop.c4baf62d8dda6027e0e2.jpg",
@@ -34,10 +34,10 @@
     "index.html": "/quijano-portfolio/index.html",
     "static/media/arrow-right-top.svg": "/quijano-portfolio/static/media/arrow-right-top.0e938dbba17b3bba8c6439b7311497de.svg",
     "main.569d86a5.css.map": "/quijano-portfolio/static/css/main.569d86a5.css.map",
-    "main.f33c2748.js.map": "/quijano-portfolio/static/js/main.f33c2748.js.map"
+    "main.78872b29.js.map": "/quijano-portfolio/static/js/main.78872b29.js.map"
   },
   "entrypoints": [
     "static/css/main.569d86a5.css",
-    "static/js/main.f33c2748.js"
+    "static/js/main.78872b29.js"
   ]
 }
