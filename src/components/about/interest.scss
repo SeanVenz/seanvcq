@@ -50,34 +50,34 @@
       order: 1; 
     }
 
-    &:hover img{
-      opacity: 1;
-      visibility: visible;
-      // display: block;
-    }
+    // &:hover img{
+    //   opacity: 1;
+    //   visibility: visible;
+    //   // display: block;
+    // }
   }
 
-  .left{
-    &:hover p{
-      transform: translateX(-20px);
-      text-decoration: line-through;
-      text-decoration-thickness: 2px;
-      text-decoration-color: $strikethrough;
-    }
-  }
+  // .left{
+  //   &:hover p{
+  //     transform: translateX(-20px);
+  //     text-decoration: line-through;
+  //     text-decoration-thickness: 2px;
+  //     text-decoration-color: $strikethrough;
+  //   }
+  // }
 
-  .right{
-    &:hover p{
-      transform: translateX(20px);
-      order: 2; 
-      text-decoration: line-through;
-      text-decoration-thickness: 2px;
-      text-decoration-color: $strikethrough;
-    }
+  // .right{
+  //   &:hover p{
+  //     transform: translateX(20px);
+  //     order: 2; 
+  //     text-decoration: line-through;
+  //     text-decoration-thickness: 2px;
+  //     text-decoration-color: $strikethrough;
+  //   }
 
-    &:hover img {
-      order: 1;
-    }
-  }
+  //   &:hover img {
+  //     order: 1;
+  //   }
+  // }
 }
 
