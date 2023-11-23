@@ -9,9 +9,24 @@ import carRental from "../../images/car-rental.jpg";
 import careerAI from "../../images/careerAI.png";
 import meanTemp from "../../images/meantemp.jpg";
 import walletWise from "../../images/walletwise.png";
+import wordpress from '../../images/wordpressss.png'
 
 function Projects() {
   const projects = [
+    {
+      name: "WordPress Projects",
+      img: wordpress,
+      points: [
+        "The projects i handled when i was on my OJT at Delonix Marketing Corporation",
+        { text: "Pro Window Cleaning Perth", url: "https://prowindowcleaningperth.com.au" },
+        { text: "Window Cleaners Brisbane", url: "https://windowcleanersbrisbane.com.au" },
+        { text: "Epoxy Flooring Perth", url: "https://epoxyflooringperth.com" },
+        { text: "Epoxy Flooring Adelaide", url: "https://epoxyflooringadelaide.net.au" },
+        { text: "Pro Painters geelong", url: "https://propaintersgeelong.com.au" },
+        { text: "Epoxy Flooring Sunshine Coast", url: "https://epoxyflooringsunshinecoast.com" },
+        { text: "The Marketing Syndicate", url: "https://themarketingsyndicate.com.au/" },
+      ],
+    },
     {
       name: "Wallet Wise",
       img: walletWise,
@@ -22,6 +37,7 @@ function Projects() {
         "Let students order and deliver foods",
         "Let students converse with each other",
         "Let students view location of courier and buyer",
+        { text: "Wallet Wise", url: "https://walletwise-silk.vercel.app" },
       ],
     },
     {
