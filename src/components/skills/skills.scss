@@ -26,7 +26,7 @@
   }
 
   .skill-bx {
-    height: 200px;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -53,13 +53,10 @@
     letter-spacing: 5px;
   }
   .item {
-    position: relative;
-    text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-align: center;
 
     img {
       // width: 60;
@@ -68,7 +65,7 @@
     }
 
     .skill-progress {
-      background-color: #20B2AA;
+      background-color: black;
       height: 10px; // make the progress bar thinner
       border-radius: 50px;
       overflow: hidden;
@@ -77,7 +74,7 @@
 
       .progress-bar {
         height: 100%;
-        background: linear-gradient(to right, #F08080, #A0522D);
+        background: white;
         border-radius: 2px;
         text-align: center;
         width: 0%; // Initial state
@@ -97,5 +94,45 @@
 @keyframes fill {
   to {
     width: var(--fill);
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  .skill {  
+
+    .item {
+      height: 100%;
+      .skill-progress{
+        height: 15px;
+
+        .progress-bar{
+          height: 15px;
+        }
+      }
+      img {
+        height: 110px;
+      }
+    }
+    p {
+      font-size: 28px;
+    }
+
+    h4{
+      font-size: 48px;
+    }
+  
+    h2 {
+      font-size: 60px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .skill {
+    .item {
+      img {
+        height: 60px;
+      }
+    }
   }
 }

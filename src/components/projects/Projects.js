@@ -8,9 +8,15 @@ import ProjectCard from "./ProjectCard";
 import carRental from '../../images/car-rental.jpg'
 import careerAI from '../../images/careerAI.png'
 import meanTemp from '../../images/meantemp.jpg'
+import walletWise from '../../images/walletwise.png'
 
 function Projects() {
   const projects = [
+    {
+      name: "Wallet Wise",
+      img: walletWise,
+      points: ["Made using ReactJS and Firebase", "Let Vendor add Foods", "Let students order food", "Let students order and deliver foods", "Let students converse with each other", "Let students view location of courier and buyer"]
+    },
     {
       name: "Interpreter",
       img: interpreter,

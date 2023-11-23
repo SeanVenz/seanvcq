@@ -40,7 +40,7 @@ function Interests() {
       </div>
       <div className="my-interests">
         <div className="left indiv-interest">
-          <p>EATING</p>
+          <p>PROGRAMMING</p>
         </div>
         <div className="right indiv-interest">
           <p>GAMING</p>
@@ -55,7 +55,7 @@ function Interests() {
           <p>VOLLEYBALL</p>
         </div>
         <div className="right indiv-interest">
-          <p>MOTORCYCLE RIDING</p>
+          <p>RIDING</p>
         </div>
       </div>
     </div>
