@@ -77,11 +77,9 @@
       &.hover {
         opacity: 0;
         transform: translate(-30px, 30px);
-        margin-left: -30px
+        margin-left: -30px;
       }
     }
-
-    
   }
   &:hover .arrow-icon:not(.hover) {
     opacity: 0;
@@ -104,20 +102,19 @@
     border-radius: 20px;
     background-color: $complement;
     border: none;
-  
+
     .image-container {
       position: relative;
       width: 100%;
       height: 100%;
-  
+
       img {
         width: 100%;
         transition: 0.3s ease;
-        height: 100%;
-        background-size: contain;
-        object-fit: cover;
+        height: auto;
+        object-fit: contain;
       }
-  
+
       .overlay {
         position: absolute;
         top: 0;
@@ -135,13 +132,13 @@
         width: 550px;
       }
     }
-  
+
     &:hover {
       .overlay {
         opacity: 1;
       }
     }
-  
+
     ul li {
       color: white;
       text-align: left;
@@ -152,7 +149,7 @@
       word-wrap: break-word;
       width: 100%;
     }
-  
+
     .proj-title {
       display: flex;
       justify-content: space-between;
@@ -168,28 +165,26 @@
         display: flex;
         align-items: center;
       }
-  
+
       .arrow-icon {
         position: relative;
         height: 30px;
         width: auto;
         opacity: 0.5;
         transition: transform 0.3s, opacity 0.3s;
-  
+
         &.hover {
           opacity: 0;
           transform: translate(-30px, 30px);
-          margin-left: -30px
+          margin-left: -30px;
         }
       }
-  
-      
     }
     &:hover .arrow-icon:not(.hover) {
       opacity: 0;
       transform: translate(30px, -30px);
     }
-  
+
     &:hover .arrow-icon.hover {
       opacity: 1;
       margin-left: -30px;

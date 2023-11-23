@@ -6,7 +6,6 @@ function ProjectCard(props) {
   const { img, title, points } = props;
 
   const renderPoint = (point, index) => {
-    // Check if point is an object with text and url
     if (typeof point === 'object' && point.url && point.text) {
       return (
         <a href={point.url} target="_blank" rel="noopener noreferrer" key={index}>
@@ -14,7 +13,6 @@ function ProjectCard(props) {
         </a>
       );
     } else {
-      // If it's just a string, return it as is
       return <span key={index}>{point}</span>;
     }
   };
