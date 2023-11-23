@@ -51,7 +51,7 @@ function Banner() {
   return (
     <div className="banner" id="home">
       <div className="heading">
-        <div className="intro">
+        <div className="intro"> 
           <h1>
             {`Hi! I'm a Philippine based aspiring `}
             <span className="wrap">{text}</span>

@@ -17,7 +17,7 @@
   height: 76vh;
 
   ::before {
-    content: '';
+    content: "";
     display: block;
     height: 200px; /* The height of your navbar */
     margin: -200px 0 0; /* Negative value of height */
@@ -33,7 +33,7 @@
     letter-spacing: 4.5px;
   }
 
-  p{
+  p {
     font: {
       size: 20px;
       family: $text-font;
@@ -47,12 +47,12 @@
     flex-direction: column;
   }
 
-  .my-logo{
+  .my-logo {
     display: flex;
     flex: 40%;
   }
 
-  .description{
+  .description {
     padding-bottom: 15px;
   }
 
@@ -76,6 +76,25 @@
     }
     100% {
       transform: translate(0, 0);
+    }
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  .banner {
+    width: 90%;
+    height: 82vh;
+    h1 {
+      font-size: 120px;
+    }
+
+    p {
+      font-size: 28px;
+    }
+
+    .floating-image {
+      width: 100%;
+      height: auto;
     }
   }
 }
