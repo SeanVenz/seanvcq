@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { slide as Menu } from 'react-burger-menu';
 import "./Nav.scss";
 import logo from "../../images/logo.png";
 
@@ -7,22 +8,39 @@ function Navigation() {
 
   useEffect(() => {
     const updateScroll = () => {
-      setScrollPosition(window.scrollY || document.documentElement.scrollTop);
-    }
+      setScrollPosition(window.pageYOffset);
+    };
     window.addEventListener('scroll', updateScroll);
     return () => window.removeEventListener('scroll', updateScroll);
   }, []);
 
+  const menuItems = (
+    <>
+      <a className="menu-item" href="#home">HOME</a>
+      <a className="menu-item" href="#about">ABOUT ME</a>
+      
+      <img src={logo} alt="logo" className={`nav-logo ${scrollPosition > 200 ? 'small' : 'large'}`} />
+      <a className="menu-item" href="#skills">SKILLS</a>
+      <a className="menu-item" href="#projects">PROJECTS</a>
+    </>
+  );
+
+  const phoneItems = (
+    <>
+      <a className="menu-item" href="#home">HOME</a>
+      <a className="menu-item" href="#about">ABOUT ME</a>
+      <a className="menu-item" href="#skills">SKILLS</a>
+      <a className="menu-item" href="#projects">PROJECTS</a>
+    </>
+  );
+
   return (
     <div className="navigation">
-      <div className="link">
-        <a href="#home">HOME</a>
-        <a href="#about">ABOUT ME</a>
-        <a href="#home">
-          <img src={logo} alt="logo" style={{height: scrollPosition > 200 ? '50px' : '100px', width: scrollPosition > 200 ? '50px' : '100px'}} />
-        </a>
-        <a href="#skills">SKILLS</a>
-        <a href="#projects">PROJECTS</a>
+      <Menu right width={ '280px' }>
+        {phoneItems}
+      </Menu>
+      <div className="desktop-menu">
+        {menuItems}
       </div>
     </div>
   );

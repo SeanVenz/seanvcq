@@ -354,9 +354,11 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      text-align: left;
+      text-align: center;
+      width: 100%;
       h3 {
         padding-top: 10px;
+        width: 100%;
         font: {
           family: $text-font;
           weight: 700;
@@ -364,6 +366,7 @@
         }
         display: flex;
         align-items: center;
+        justify-content: center;
       }
 
       .arrow-icon {
