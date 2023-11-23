@@ -18,6 +18,11 @@
     color: $text;
   }
 
+  .interest-heading{
+    display: flex;
+    justify-content: center;
+  }
+
   .my-interests{
     display: flex;
     justify-content: center;
@@ -28,7 +33,6 @@
   .indiv-interest{
     display: flex;
     justify-content: center;
-    margin-left: 150px;
 
     p{
       font: {
@@ -41,7 +45,6 @@
     }
 
     img{
-      // display: none;
       visibility: hidden;
       opacity: 0;
       width: 150px;
@@ -49,35 +52,61 @@
       transition: opacity 0.5s ease, visibility 0.5s ease;
       order: 1; 
     }
-
-    // &:hover img{
-    //   opacity: 1;
-    //   visibility: visible;
-    //   // display: block;
-    // }
   }
-
-  // .left{
-  //   &:hover p{
-  //     transform: translateX(-20px);
-  //     text-decoration: line-through;
-  //     text-decoration-thickness: 2px;
-  //     text-decoration-color: $strikethrough;
-  //   }
-  // }
-
-  // .right{
-  //   &:hover p{
-  //     transform: translateX(20px);
-  //     order: 2; 
-  //     text-decoration: line-through;
-  //     text-decoration-thickness: 2px;
-  //     text-decoration-color: $strikethrough;
-  //   }
-
-  //   &:hover img {
-  //     order: 1;
-  //   }
-  // }
 }
 
+@media screen and (max-width: 768px) {
+  .interests {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    flex-direction: column;
+  
+    h2 {
+      font: {
+        family: $heading-font;
+        size: 20px;
+      }
+      letter-spacing: 4px;
+      color: $text;
+    }
+  
+    .interest-heading{
+      display: flex;
+      justify-content: center;
+    }
+  
+    .my-interests{
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .indiv-interest{
+      display: flex;
+      justify-content: center;
+  
+      p{
+        font: {
+          family: $text-font;
+          size: 30px
+        }
+        color: $text;
+        transition: transform 0.5s ease;
+        order: 0;
+      }
+  
+      img{
+        visibility: hidden;
+        opacity: 0;
+        width: 150px;
+        height: 100px;
+        transition: opacity 0.5s ease, visibility 0.5s ease;
+        order: 1; 
+      }
+    }
+  }
+}

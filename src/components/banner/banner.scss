@@ -129,10 +129,9 @@
     flex-direction: column;
     justify-content: center;
     border-radius: 25px;
-
+    padding: 0;
     .heading {
-      order: 1; // First in order
-      width: 90%; // Consistent width
+      width: 90%; 
       h1 {
         font-size: 44px;
         text-align: center;
@@ -143,19 +142,19 @@
       }
     }
 
-    .my-logo {
-      order: 2; // Second in order
-      width: 100%; // Full width
-      display: flex;
-      justify-content: center;
-      img {
-        width: 400px;
-      }
+    .heading{
+      padding-top: 5%
     }
 
-    .btn {
-      order: 3; // Last in order
-      // Additional styling for button if needed
+    .my-logo {
+      width: 100%; 
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        width: 100%;
+        margin-left: 6%;
+      }
     }
   }
 }
