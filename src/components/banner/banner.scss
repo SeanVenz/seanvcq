@@ -43,13 +43,13 @@
 
   .heading {
     display: flex;
-    flex: 60%;
+    width: 60%;
     flex-direction: column;
   }
 
   .my-logo {
     display: flex;
-    flex: 40%;
+    width: 40%;
   }
 
   .description {
@@ -98,3 +98,65 @@
     }
   }
 }
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .banner{
+    width: 90%;
+    height: 70vh;
+    h1{
+      font-size: 60px;
+    }
+
+    img{
+      width: 450px;
+    }
+
+    .heading{
+      width: 55;
+    }
+
+    .my-logo{
+      width: 45%;
+    }
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .banner {
+    width: 90%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 25px;
+
+    .heading {
+      order: 1; // First in order
+      width: 90%; // Consistent width
+      h1 {
+        font-size: 44px;
+        text-align: center;
+      }
+      p {
+        text-align: center;
+        font-size: 18px;
+      }
+    }
+
+    .my-logo {
+      order: 2; // Second in order
+      width: 100%; // Full width
+      display: flex;
+      justify-content: center;
+      img {
+        width: 400px;
+      }
+    }
+
+    .btn {
+      order: 3; // Last in order
+      // Additional styling for button if needed
+    }
+  }
+}
+

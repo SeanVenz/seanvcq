@@ -6,11 +6,7 @@ import Btn from "./btn";
 function Banner() {
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
-  const toRotate = [
-    "Full-Stack Developer",
-    "ML Engineer",
-    "Software Engineer",
-  ];
+  const toRotate = ["Full-Stack Developer", "ML Engineer", "Software Engineer"];
   const [text, setText] = useState("");
   const [delta, setDelta] = useState(100); // Reduced delta value for faster typing
   const period = 2000;
@@ -51,7 +47,7 @@ function Banner() {
   return (
     <div className="banner" id="home">
       <div className="heading">
-        <div className="intro"> 
+        <div className="intro">
           <h1>
             {`Hi! I'm a Philippine based aspiring `}
             <span className="wrap">{text}</span>
@@ -63,7 +59,7 @@ function Banner() {
             of Technology-University
           </p>
         </div>
-          <Btn></Btn>
+        <Btn></Btn>
       </div>
       <div className="my-logo">
         <img src={banner} alt="logo" className="floating-image" />

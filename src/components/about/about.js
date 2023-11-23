@@ -13,8 +13,6 @@ function About() {
     { img: email, desc: "quijano.seanvenz@gmail.com", alt: "email" },
   ];
 
-  
-
   return (
     <div className="about" id="about">
       <div className="about-heading">
