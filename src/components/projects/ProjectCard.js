@@ -28,7 +28,7 @@ function ProjectCard(props) {
             ))}
           </ul>
         </div>
-      </div>
+      </div> 
       <div className="proj-title">
         <h3>{title}
         <img src={arrow} className="arrow-icon" alt="arrow"/>

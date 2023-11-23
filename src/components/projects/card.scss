@@ -111,8 +111,8 @@
       img {
         width: 100%;
         transition: 0.3s ease;
-        height: auto;
-        object-fit: contain;
+        height: 100%;
+        object-fit: cover;
       }
 
       .overlay {
