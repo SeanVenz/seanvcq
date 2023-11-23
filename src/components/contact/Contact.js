@@ -12,7 +12,7 @@ function Contact() {
           </div>
           <div className="contact-desc">
             <span>
-              Thinking of a project? <br></br>Reach out to me and we could do it
+              Thinking of a project? <br></br>Reach out to me<br></br> and we could do it
               today!
             </span>
           </div>
