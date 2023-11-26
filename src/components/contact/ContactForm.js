@@ -56,7 +56,7 @@ function ContactForm() {
       {messageSent ? (
         <div className="message-sent">
           Your message has been sent successfully! 
-        </div>
+        </div> 
       ) : (
         <form className="form" onSubmit={sendEmail}>
           <div className="form-group">
@@ -70,6 +70,10 @@ function ContactForm() {
           <div className="form-group">
             <label htmlFor="subject">Subject</label>
             <input type="text" id="subject" name="subject" required />
+          </div>
+          <div className="form-group">
+            <label htmlFor="subject">Social Link</label>
+            <input type="url" id="link" name="subject" required />
           </div>
           <div className="form-group">
             <label htmlFor="textarea">How Can I Help You?</label>
