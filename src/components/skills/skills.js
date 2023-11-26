@@ -58,7 +58,7 @@ function Skills() {
         { name: "Git and Github", proficiency: 75, logo: github },
         { name: "Firebase", proficiency: 50, logo: firebase },
         { name: "Docker", proficiency: 50, logo: docker },
-        { name: "Wordpress", proficiency: 50, logo: wordpress },
+        { name: "Wordpress", proficiency: 85, logo: wordpress },
       ],
     },
   ];
