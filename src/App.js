@@ -9,8 +9,22 @@ import Interests from './components/about/interest';
 import Projects from './components/projects/Projects';
 import Contact from './components/contact/Contact';
 import Footer from './components/footer/Footer';
+import React, { useState, useEffect } from 'react';
+import Loader from './components/Loader';
+
 
 function App() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    window.onload = () => {
+      setIsLoading(false);
+    };
+  }, []);
+
+  if (isLoading) {
+    return <Loader />;
+  }
   return (
     <div className="App">
       <Navigation></Navigation>
