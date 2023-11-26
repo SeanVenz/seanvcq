@@ -19,11 +19,12 @@
   }
 
   .my-form {
+    padding-top: 20px;
     padding-bottom: 20px;
     display: flex;
     justify-content: left;
     align-items: end;
-    height: 570px;
+    height: 100%;
   }
 
   p {
@@ -136,10 +137,11 @@
 
     .my-form {
       padding-bottom: 20px;
+      padding-top: 0;
       display: flex;
       justify-content: left;
       align-items: end;
-      height: 570px;
+      height: 100%;
     }
 
     .contact-left {
@@ -157,7 +159,7 @@
       background-color: $secondary-color;
       border-radius: 20px;
       border: solid 1px $accent;
-      gap: 50px;
+      gap: 0px;
       flex-direction: column;
     }
 

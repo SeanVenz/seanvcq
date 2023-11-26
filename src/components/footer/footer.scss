@@ -32,3 +32,14 @@
     gap: 1%;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .my-footer{
+    .links{
+      gap: 10px
+    }
+    a{
+      width: 10%;
+    }
+  }
+}
