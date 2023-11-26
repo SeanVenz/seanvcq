@@ -49,8 +49,8 @@ function Banner() {
       <div className="heading">
         <div className="intro">
           <h1>
-            {`Hi! I'm a Philippine based aspiring `}
-            <span className="wrap">{text}</span>
+            {"Hi! I'm a Philippine based aspiring" }
+            <span className="wrap">{" " + text}</span>
           </h1>
         </div>
         <div className="description">

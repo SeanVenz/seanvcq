@@ -1,16 +1,32 @@
 @import "../../styles/variables";
 @import "../../styles/font";
 
-.my-footer{
-    background-color: $primary-color;
-    transition: background-color 2s ease;
-    p{
-        text-align: center;
-        font: {
-            size: 14px;
-        }
-        color: $complement;
-        margin: 0;
-        padding: 0;
+.my-footer {
+  //   background-color: $primary-color;
+  background-image: url("../../images/wave-haikei.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1%;
+  p {
+    text-align: center;
+    font: {
+      size: 14px;
     }
+    color: $complement;
+    margin: 0;
+    padding: 0;
+  }
+  img {
+    height: 48px;
+    width: 48px;
+  }
+  .links {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1%;
+    gap: 1%;
+  }
 }
