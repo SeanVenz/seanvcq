@@ -19,7 +19,7 @@ function Contact() {
             <div className="download-resume">
               <p>Download my resume:</p>
               <a
-                href={`${process.env.PUBLIC_URL}/resume.pdf`}
+                href={`${process.env.PUBLIC_URL}/Quijano, Sean Venz resume.pdf`}
                 download="Quijano, Sean Venz resume.pdf"
                 className="download-resume-button"
               >
