@@ -55,7 +55,7 @@ function ContactForm() {
     <div className="form-container">
       {messageSent ? (
         <div className="message-sent">
-          Your message has been sent successfully!
+          Your message has been sent successfully! 
         </div>
       ) : (
         <form className="form" onSubmit={sendEmail}>
