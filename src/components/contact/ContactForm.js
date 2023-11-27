@@ -51,6 +51,14 @@ function ContactForm() {
       );
   };
 
+  const renderButtonContent = () => {
+    if (submitting) {
+      return <div className="spinner"></div>;
+    } else {
+      return "Submit";
+    }
+  };
+
   return (
     <div className="form-container">
       {messageSent ? (
@@ -87,8 +95,8 @@ function ContactForm() {
               {" "}
             </textarea>
           </div>
-          <button className="form-submit-btn" type="submit">
-            {submitting ? "Submitting" : "Submit"}
+          <button className="form-submit-btn" type="submit" disabled={submitting}>
+            {renderButtonContent()}
           </button>
         </form>
       )}

@@ -16,16 +16,6 @@ function Contact() {
               Thinking of a project? <br></br>Reach out to me<br></br> and we
               could do it today!
             </span>
-            <div className="download-resume">
-              <p>Download my resume:</p>
-              <a
-                href={`${process.env.PUBLIC_URL}/Quijano, Sean Venz resume.pdf`}
-                download="Quijano, Sean Venz resume.pdf"
-                className="download-resume-button"
-              >
-                <img src={download} alt="Download Button"></img>
-              </a>
-            </div>
           </div>
         </div>
         <div className="my-form">
