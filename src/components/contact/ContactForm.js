@@ -81,7 +81,7 @@ function ContactForm() {
           </div>
           <div className="form-group">
             <label htmlFor="subject">Social Link</label>
-            <input type="url" id="link" name="subject" required />
+            <input type="url" id="link" name="link" required />
           </div>
           <div className="form-group">
             <label htmlFor="textarea">How Can I Help You?</label>
