@@ -9,19 +9,19 @@ body {
   overflow-x: hidden;
 
   &::-webkit-scrollbar {
-    width: 10px; // Set the width of the scrollbar
+    width: 10px;
   }
 
   &::-webkit-scrollbar-track {
-    background: #FFF; // Set the background color of the track
+    background: #FFF; 
   }
 
   &::-webkit-scrollbar-thumb {
-    background: #000; // Set the color of the scroll thumb
-    border-radius: 5px; // Optional, you can add border-radius to make it round.
+    background: #000; 
+    border-radius: 5px; 
   }
 
   &::-webkit-scrollbar-thumb:hover {
-    background: #606060; // Change color when user hovers over the scroll thumb
+    background: #606060; 
   }
 }

@@ -15,6 +15,7 @@ import dotnet from "../../images/NET_Core_Logo.png";
 import wordpress from "../../images/wordpress.png";
 import github from "../../images/git.png";
 import react from "../../images/react.png";
+import Certifications from "./Certifications";
 
 function Skills() {
 
@@ -118,6 +119,7 @@ function Skills() {
           </Row>
         ))}
       </Container>
+      {/* <Certifications></Certifications> */}
     </section>
   );
 }

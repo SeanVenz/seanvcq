@@ -8,6 +8,7 @@
   padding-top: 40px;
   background-color: $primary-color;
   padding-top: 50px;
+  flex-direction: column;
 
   &.visible {
     background-color: $complement;

@@ -12,6 +12,14 @@
   padding: 10px 20px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 
+  a{
+    transition: transform 0.2s ease-in-out !important;
+    &:hover{
+      transform: scale(1.4) !important;
+      text-decoration: underline;
+    }
+  }
+
   .desktop-menu {
     display: flex;
     width: 100%;
@@ -40,7 +48,7 @@
     .desktop-menu {
       display: flex;
       align-items: center;
-      gap: 80px;
+      gap: 100px;
     }
   }
 
@@ -63,7 +71,6 @@
   }
 }
 
-/* Burger menu styles */
 .bm-burger-button {
   position: absolute;
   width: 36px;

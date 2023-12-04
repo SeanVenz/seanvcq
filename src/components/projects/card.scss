@@ -303,6 +303,10 @@
     background-color: $complement;
     border: none;
 
+    a{
+      justify-content: flex-start;
+    }
+
     .image-container {
       position: relative;
       width: 100%;
@@ -344,7 +348,7 @@
       text-align: left;
       font: {
         family: $text-font;
-        size: 18px;
+        size: 16px;
       }
       word-wrap: break-word;
       width: 100%;
