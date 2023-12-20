@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import './index.scss';
+import React, { useState, useEffect } from "react";
+import "./index.scss";
 
-const ImagePreloader = ({ src, alt, width, height }) => {
+const ImagePreloader = ({ src, alt }) => {
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
@@ -13,8 +13,8 @@ const ImagePreloader = ({ src, alt, width, height }) => {
   }, [src]);
 
   return loaded ? (
-    <div className="img">
-      <img src={src} alt={alt} width={width} height={height} />
+    <div className="floating-image">
+      <img src={src} alt={alt} />
     </div>
   ) : (
     <div>

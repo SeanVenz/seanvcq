@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "./banner.scss";
-import banner from "../../images/banner.png";
+import banner from "../../images/banner1.png";
 import Btn from "./btn";
+import ImagePreloader from "../preloader";
 
 function Banner() {
   const [loopNum, setLoopNum] = useState(0);
@@ -40,7 +41,7 @@ function Banner() {
     } else if (isDeleting && updatedText === "") {
       setIsDeleting(false);
       setLoopNum(loopNum + 1);
-      setDelta(100); // Reset delta value for faster typing
+      setDelta(100);
     }
   };
 
@@ -62,7 +63,7 @@ function Banner() {
         <Btn></Btn>
       </div>
       <div className="my-logo">
-        <img src={banner} alt="logo" className="floating-image" />
+        <ImagePreloader src={banner} alt="logo" ></ImagePreloader>
       </div>
     </div>
   );
