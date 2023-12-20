@@ -9,7 +9,7 @@ function Banner() {
   const [isDeleting, setIsDeleting] = useState(false);
   const toRotate = ["Full-Stack Developer", "ML Engineer", "Software Engineer"];
   const [text, setText] = useState("");
-  const [delta, setDelta] = useState(100); // Reduced delta value for faster typing
+  const [delta, setDelta] = useState(100);
   const period = 2000;
 
   useEffect(() => {
