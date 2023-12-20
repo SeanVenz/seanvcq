@@ -16,6 +16,7 @@ import wordpress from "../../images/wordpress.png";
 import github from "../../images/git.png";
 import react from "../../images/react.png";
 import Certifications from "./Certifications";
+import ImagePreloader from "../preloader";
 
 function Skills() {
 
@@ -103,7 +104,7 @@ function Skills() {
                 >
                   {category.skills.map((skill, idx) => (
                     <div key={idx} className="item">
-                        <img src={skill.logo} alt={skill.name} />
+                      <ImagePreloader src={skill.logo} alt={skill.name} />
                       <div className="skill-progress">
                         <div
                           className={`progress-bar ${isVisible ? 'animate' : ''}`}
