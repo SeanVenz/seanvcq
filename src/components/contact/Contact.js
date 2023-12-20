@@ -1,7 +1,6 @@
 import React from "react";
 import "./contacs.scss";
 import ContactForm from "./ContactForm";
-import download from "../../images/icons8-download-button-64.png";
 
 function Contact() {
   return (

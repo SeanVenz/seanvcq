@@ -35,7 +35,6 @@ function ContactForm() {
       )
       .then(
         (result) => {
-          console.log(result.text);
           setMessageSent(true);
           localStorage.setItem("sendTime", new Date().getTime());
 

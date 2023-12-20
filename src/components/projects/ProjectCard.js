@@ -1,6 +1,7 @@
 import React from "react";
 import "./card.scss";
 import arrow from '../../images/arrow-right-top.svg'
+import ImagePreloader from "../preloader";
 
 function ProjectCard(props) {
   const { img, title, points } = props;
@@ -20,7 +21,7 @@ function ProjectCard(props) {
   return (
     <div className="card">
       <div className="image-container">
-        <img src={img} alt={title} />
+        <ImagePreloader src={img} alt={title} />
         <div className="overlay">
           <ul>
             {points.map((point, index) => (
