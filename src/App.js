@@ -10,22 +10,26 @@ import Projects from './components/projects/Projects';
 import Contact from './components/contact/Contact';
 import Footer from './components/footer/Footer';
 import Certifications from './components/skills/Certifications';
-// import React, { useState, useEffect } from 'react';
-// import Loader from './components/Loader';
+import React, { useState, useEffect } from 'react';
+import Loader from './components/Loader';
 
 
 function App() {
-  // const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);
 
-  // useEffect(() => {
-  //   window.onload = () => {
-  //     setIsLoading(false);
-  //   };
-  // }, []);
+  useEffect(() => {
+    const simulateLoading = () => {
+      setTimeout(() => {
+        setIsLoading(false);
+      }, 300); 
+    };
 
-  // if (isLoading) {
-  //   return <Loader />;
-  // }
+    simulateLoading();
+  }, []);
+
+  if (isLoading) {
+    return <Loader />;
+  }
   return (
     <div className="App">
       <Navigation></Navigation>
@@ -33,7 +37,7 @@ function App() {
       <About></About>
       <Interests></Interests>
       <Skills  />
-      <Certifications/>
+      {/* <Certifications/> */}
       <Projects  />
       <Contact />
       <Footer/>
