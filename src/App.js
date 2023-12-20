@@ -15,21 +15,7 @@ import Loader from './components/Loader';
 
 
 function App() {
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    const simulateLoading = () => {
-      setTimeout(() => {
-        setIsLoading(false);
-      }, 300); 
-    };
-
-    simulateLoading();
-  }, []);
-
-  if (isLoading) {
-    return <Loader />;
-  }
+  
   return (
     <div className="App">
       <Navigation></Navigation>
