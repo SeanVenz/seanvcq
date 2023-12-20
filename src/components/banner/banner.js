@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./banner.scss";
-import banner from "../../images/banner1.png";
+import banner from "../../images/banner.png";
 import Btn from "./btn";
 import ImagePreloader from "../preloader";
 
