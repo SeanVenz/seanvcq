@@ -16,6 +16,9 @@ module.exports = {
         secondary: '#F0BF6C',
         tertiary: '#3D3E42',
         accent: '#FFCB6C'
+      },
+      borderColor:{
+        accent: '#FFCB6C'
       }
     },
   },
