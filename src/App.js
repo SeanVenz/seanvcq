@@ -14,7 +14,7 @@ import React, { useState, useEffect } from 'react';
 import Loader from './components/Loader';
 
 
-function App() {
+function App() { 
   
   return (
     <div className="App">
