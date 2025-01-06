@@ -68,7 +68,7 @@ function Contact() {
 
             <div class="flex items-center w-full text-white text-5xl font-bold py-4">
                 <div class="h-[2px] bg-accent flex-grow"></div>
-                <h1 class="px-8 font-main">Contact Me</h1>
+                <h1 class="lg:px-8 px-4 font-main text-2xl lg:text-4xl">Contact Me</h1>
                 <div class="h-[2px] bg-accent flex-grow"></div>
             </div>
             <div className='max-w-screen-md mt-4 text-main w-full flex flex-col flex-wrap gap-10'>
@@ -83,7 +83,7 @@ function Contact() {
                 <form
                     onSubmit={handleSubmit}
                     action="#"
-                    className="space-y-4 sm:space-y-10"
+                    className="space-y-4 sm:space-y-10 p-4 lg:p-0"
                 >
                     <div className="flex flex-col gap-4">
                         <div className="w-full">
@@ -93,7 +93,7 @@ function Contact() {
                             >
                                 Name
                             </label>
-                            <div className="bg-white md:bg-transparent flex items-center border border-accent rounded-md px-4 py-3">
+                            <div className="bg-transparent flex items-center border border-accent rounded-md px-4 py-3">
                                 <div className="flex items-center border-r border-slate-500 pr-1 mr-3">
                                     <svg
                                         className="w-5 h-5 mr-3 "
@@ -129,7 +129,7 @@ function Contact() {
                             >
                                 Email
                             </label>
-                            <div className="bg-white md:bg-transparent flex items-center border border-accent rounded-md px-4 py-3">
+                            <div className="bg-transparent flex items-center border border-accent rounded-md px-4 py-3">
                                 <div className="flex items-center border-r border-slate-500 pr-1 mr-3">
                                     <svg
                                         className="w-5 h-5 mr-3 text-gray-500"
@@ -162,7 +162,7 @@ function Contact() {
                             >
                                 Message
                             </label>
-                            <div className="flex items-start border border-accent rounded-md px-4 py-3 bg-white md:bg-transparent">
+                            <div className="flex items-start border border-accent rounded-md px-4 py-3 bg-transparent">
                                 <div className="flex items-center border-r pr-4 mr-4">
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
