@@ -3,7 +3,7 @@ import { projectData } from '../constants/constant'
 
 function Projects() {
   return (
-    <section className='flex-col flex items-center justify-center gap-8 text-main'>
+    <section className='flex-col flex items-center justify-center gap-8 text-main' id='projects'>
       <h2>Projects</h2>
       <p>Projects include Personal, OJT, and Work Experiences</p>
       <div className='max-w-screen-2xl w-full flex justify-center items-center flex-row flex-wrap gap-12'>

@@ -126,7 +126,22 @@ export const projectData = [
 ]
 
 export const experience = [
-    { date: '2025', position: 'Junior Developer', location: 'Poland', company: 'Odysse', description: 'Developed a new Backend-as-a-Service product using the MERN stack (MySQL, Express, ReactJS, Node), ensuring accessibility across all screen sizes for the landing pages. Additionally, also implemented logs for the superadmin and analytics features for both users and admins in both the frontend and backend. Also worked as part of the team to develop a social media platform using the TALL stack (Tailwind, AlpineJS, Laravel, Livewire). Furthermore, Also created a custom hardcoded WordPress theme for the company’s landing page.' },
+    { date: '2024-2025', position: 'Junior Developer', location: 'Poland', company: 'Odysse', description: 'Developed a new Backend-as-a-Service product using the MERN stack (MySQL, Express, ReactJS, Node), ensuring accessibility across all screen sizes for the landing pages. Additionally, also implemented logs for the superadmin and analytics features for both users and admins in both the frontend and backend. Also worked as part of the team to develop a social media platform using the TALL stack (Tailwind, AlpineJS, Laravel, Livewire). Furthermore, Also created a custom hardcoded WordPress theme for the company’s landing page.' },
     { date: '2024', position: 'Junior Software Engineer', location: 'Cebu City', company: 'Kyocera', description: 'Developed and maintained software solutions by creating and interpreting UML diagrams, programming firmware with C++ for server-side applications, and building and optimizing client-side interfaces using HTML and JavaScript to ensure seamless integration with server-side functionalities.' },
     { date: '2023', position: 'Intern', location: 'Cebu City', company: 'Delonix', description: 'Collaborated with designers to ensure new web pages adhered to PSD formats, creating a seamless user experience and boosting customer satisfaction. Implemented SEO best practices by optimizing meta tags, images, and website performance, resulting in increased organic search traffic. Additionally, revamped existing WordPress design templates to align with client branding guidelines, ensuring consistency and professionalism.' },
 ]
+
+export const contact = [
+    {icon: <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M7 17q-.825 0-1.412-.587T5 15V5q0-.825.588-1.412T7 3h14q.825 0 1.413.588T23 5v10q0 .825-.587 1.413T21 17zm7-4.7L7 7.425V15h14V7.425zm0-2.45L21 5H7zM3 21q-.825 0-1.412-.587T1 19V6.5h2V19h16.5v2zM21 7.35V5H7v2.35V5h14z" />
+    </svg>, text: 'quijano.seanvenz@gmail.com'},
+    {icon: <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M4.05 21q-.45 0-.75-.3t-.3-.75V15.9q0-.325.225-.587t.575-.363l3.45-.7q.35-.05.713.063t.587.337L10.9 17q.95-.55 1.8-1.213t1.625-1.437q.825-.8 1.513-1.662t1.187-1.788L14.6 8.45q-.2-.2-.275-.475T14.3 7.3l.65-3.5q.05-.325.325-.562T15.9 3h4.05q.45 0 .75.3t.3.75q0 3.125-1.362 6.175t-3.863 5.55t-5.55 3.863T4.05 21" />
+    </svg>, text: '(+63) 915-019-3697'},
+]
+
+export const form = [
+    { type: 'email', placeholder: 'Enter your email', name: 'email' },
+    { type: 'email', placeholder: 'Enter your email', name: 'email' }
+
+  ];

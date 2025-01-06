@@ -3,7 +3,7 @@ import { socialLinks } from '../constants/constant'
 
 function Home() {
     return (
-        <section className='flex items-center justify-center h-screen'>
+        <section className='flex items-center justify-center h-screen' id='home'>
             <div className='max-w-screen-2xl flex items-center justify-center w-full'>
                 <div className='flex flex-col gap-6'>
                     <h1 className='text-4xl text-main'>I'M <span className='text-accent text-5xl'>SEAN QUIJANO</span></h1>

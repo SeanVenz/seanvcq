@@ -9,6 +9,7 @@ module.exports = {
       textColor:{
         main: '#FCFCFC',
         secondary: '#5B5C60',
+        tertiary: '#34353A',
         accent: '#FFCB6C'
       },
       backgroundColor:{

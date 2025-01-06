@@ -3,7 +3,7 @@ import { experience } from '../constants/constant'
 
 function Experience() {
     return (
-        <section className='flex-col flex items-center justify-center gap-8 bg-tertiary text-main'>
+        <section className='flex-col flex items-center justify-center gap-8 bg-tertiary text-main' id='experience'>
 
             <h2 className='text-2xl'>Experience</h2>
             <div className='max-w-screen-md text-main w-full flex flex-col flex-wrap gap-10'>
