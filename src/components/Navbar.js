@@ -21,18 +21,16 @@ function Navbar() {
             const offsetPosition = section.offsetTop;
             window.scrollTo({
                 top: offsetPosition,
-                behavior: 'smooth', 
+                behavior: 'smooth',
             });
-            setActive(id); 
+            setActive(id);
         }
     };
 
     return (
         <nav className="p-6 flex items-center justify-center fixed w-full font-secondary">
             <div className='flex items-center justify-center w-full max-w-screen-2xl'>
-                <a href="#home">
-                    <img src={logo} alt="Logo" className='' />
-                </a>
+                <img src={logo} alt="Logo" className='hover:cursor-pointer' onClick={() => handleScrollToSection('home')} />
                 <ul className="flex flex-row w-full items-center justify-center gap-8 text-base">
                     {navItems.map(item => (
                         <li key={item.id}>
