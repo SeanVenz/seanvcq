@@ -3,17 +3,17 @@ import { about } from '../constants/constant'
 
 function About() {
     return (
-        <div className=' flex flex-col w-full items-center justify-center'>
+        <section className=' flex flex-col w-full items-center justify-center' id='about'>
             {about.map((text, id) => (
-                <div className=' max-w-5xl text-main'>
-                    <h2>{text.header}</h2>
-                    <div className='flex flex-row flex-wrap'>
-                        <div className='h-2 border-b-2 border-accent'></div>
-                        <p className=''>{text.text}</p>
+                <div className='lg:max-w-screen-xl max-w-screen-sm w-full px-8 text-center md:text-start lg:py-0 text-main flex flex-col gap-2'>
+                    <h2 className='text-2xl lg:text-4xl text-center lg:text-start font-main'>{text.header}</h2>
+                    <div className='flex mt-2 flex-row items-start justify-center lg:justify-start gap-4 flex-wrap'>
+                        <div className='w-12 mt-4 border-b-2 border-accent'></div>
+                        <p className='w-11/12 font-secondary text-base lg:text-lg'>{text.text}</p>
                     </div>
                 </div>
             ))}
-        </div>
+        </section>
     )
 }
 
