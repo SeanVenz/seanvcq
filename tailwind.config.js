@@ -41,6 +41,10 @@ module.exports = {
           },
         },
       },
+      fontFamily: {
+        main: ['DM Serif Text', 'serif'],
+        secondary: ['Raleway', 'sans-serif'],
+      },
     },
   },
   plugins: [],

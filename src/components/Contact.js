@@ -12,6 +12,8 @@ function Contact() {
         message: "",
     });
 
+    const year = new Date().getFullYear();
+
     const handleChange = (e) => {
         const { id, value } = e.target;
         setFormData((prevState) => ({
@@ -62,15 +64,15 @@ function Contact() {
     };
 
     return (
-        <section className='flex-col pb-4 flex items-center justify-center gap-8 bg-tertiary text-main' id='contact'>
+        <section className='flex-col pt-20 flex items-center justify-center gap-8 bg-tertiary text-main' id='contact'>
 
             <div class="flex items-center w-full text-white text-5xl font-bold py-4">
                 <div class="h-[2px] bg-accent flex-grow"></div>
-                <h1 class="px-8">Contact Me</h1>
+                <h1 class="px-8 font-main">Contact Me</h1>
                 <div class="h-[2px] bg-accent flex-grow"></div>
             </div>
-            <div className='max-w-screen-md text-main w-full flex flex-col flex-wrap gap-10'>
-                <div className='flex flex-wrap flex-row gap-4 justify-center items-center'>
+            <div className='max-w-screen-md mt-4 text-main w-full flex flex-col flex-wrap gap-10'>
+                <div className='flex mb-4 flex-wrap flex-row gap-4 justify-center items-center'>
                     {contact.map((con, index) => (
                         <div className='flex w-72 flex-row gap-4 items-center justify-center px-5 py-3 bg-main rounded-md'>
                             {con.icon} <span className='text-accent'>{con.text}</span>
@@ -81,7 +83,7 @@ function Contact() {
                 <form
                     onSubmit={handleSubmit}
                     action="#"
-                    className="space-y-4 sm:space-y-8"
+                    className="space-y-4 sm:space-y-10"
                 >
                     <div className="flex flex-col gap-4">
                         <div className="w-full">
@@ -204,7 +206,7 @@ function Contact() {
                         <button
                             type="submit"
                             disabled={isLoading}
-                            className={`bg-main px-8 py-4 text-accent rounded-lg hover:bg-accent hover:text-tertiary transition-all duration-300 ease-in-out flex items-center justify-center ${isLoading ? 'opacity-50 cursor-not-allowed' : ''}`}
+                            className={`bg-main px-10 py-3 text-accent rounded-lg hover:bg-accent hover:text-tertiary transition-all duration-300 ease-in-out flex items-center justify-center ${isLoading ? 'opacity-50 cursor-not-allowed' : ''}`}
                         >
                             {isLoading ? (
                                 <>
@@ -248,6 +250,7 @@ function Contact() {
                 </div>
                 <div class="h-[2px] bg-accent flex-grow"></div>
             </div>
+            <p>© {year} Sean Venz Quijano | All Rights Reserved</p>
         </section>
     )
 }

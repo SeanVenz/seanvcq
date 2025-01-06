@@ -32,7 +32,7 @@ export const socialLinks = [
 ]
 
 export const about = [
-    { header: 'About', text: `Hey! I'm Sean Venz Quijano, a passionate programmer specializing in web development. I thrive on collaborating with like-minded individuals to solve programming challenges. Constantly seeking knowledge and staying up-to-date with industry trends.` },
+    { header: 'About Me', text: `Hey! I'm Sean Venz Quijano, a passionate programmer specializing in web development. I thrive on collaborating with like-minded individuals to solve programming challenges. Constantly seeking knowledge and staying up-to-date with industry trends.` },
 ]
 
 export const skillsData = [

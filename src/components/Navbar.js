@@ -28,7 +28,7 @@ function Navbar() {
     };
 
     return (
-        <nav className="p-6 flex items-center justify-center fixed w-full">
+        <nav className="p-6 flex items-center justify-center fixed w-full font-secondary">
             <div className='flex items-center justify-center w-full max-w-screen-2xl'>
                 <a href="#home">
                     <img src={logo} alt="Logo" className='' />

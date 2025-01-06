@@ -6,10 +6,10 @@ function About() {
         <section className=' flex flex-col w-full items-center justify-center' id='about'>
             {about.map((text, id) => (
                 <div className='max-w-screen-xl w-full text-main flex flex-col gap-2'>
-                    <h2 className='text-3xl'>{text.header}</h2>
-                    <div className='flex flex-row flex-wrap'>
-                        {/* <div className='h-4 border border-white'></div> */}
-                        <p className='w-11/12 text-lg'>{text.text}</p>
+                    <h2 className='text-4xl font-main'>{text.header}</h2>
+                    <div className='flex mt-2 flex-row items-start gap-4 flex-wrap'>
+                        <div className='w-12 mt-4 border-b-2 border-accent'></div>
+                        <p className='w-11/12 font-secondary text-lg'>{text.text}</p>
                     </div>
                 </div>
             ))}
