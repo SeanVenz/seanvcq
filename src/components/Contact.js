@@ -250,7 +250,7 @@ function Contact() {
                 </div>
                 <div class="h-[2px] bg-accent flex-grow"></div>
             </div>
-            <p>© {year} Sean Venz Quijano | All Rights Reserved</p>
+            <p className='pb-2'>© {year} Sean Venz Quijano | All Rights Reserved</p>
         </section>
     )
 }
