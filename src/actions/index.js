@@ -17,11 +17,11 @@ export const sendEmail = async (templateParams, setSuccess, setError) => {
             return true;
         }
         if(hasSent){
-            setError("Tang ina mo kung sino kang animal ka");
+            setError("You have already sent a message.");
         }
 
     } catch (error) {
-        setError("Tang ina mo kung sino kang animal ka");
+        setError("Something went wrong");
         console.log(error);
         return false;
     }
