@@ -81,7 +81,7 @@ function Contact() {
                 </div>
 
                 <form
-                    onSubmit={handleSubmit}
+                    // onSubmit={handleSubmit}
                     action="#"
                     className="space-y-4 sm:space-y-10 p-4 lg:p-0"
                 >
