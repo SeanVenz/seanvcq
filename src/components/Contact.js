@@ -64,7 +64,7 @@ function Contact() {
     };
 
     return (
-        <section className='flex-col pt-20 flex items-center justify-center gap-8 bg-tertiary text-main' id='contact'>
+        <section className='flex-col pt-20 flex items-center justify-center gap-8 text-main' id='contact'>
 
             <div class="flex items-center w-full text-white text-5xl font-bold py-4">
                 <div class="h-[2px] bg-accent flex-grow"></div>
@@ -74,14 +74,14 @@ function Contact() {
             <div className='max-w-screen-md mt-4 text-main w-full flex flex-col flex-wrap gap-10'>
                 <div className='flex mb-4 flex-wrap flex-row gap-4 justify-center items-center'>
                     {contact.map((con, index) => (
-                        <div className='flex w-72 flex-row gap-4 items-center justify-center px-5 py-3 bg-main rounded-md'>
-                            {con.icon} <span className='text-accent'>{con.text}</span>
+                        <div className='flex w-72  flex-row gap-4 items-center justify-center px-5 py-3 bg-light-main dark:bg-main rounded-md' key={index}>
+                            {con.icon} <span className='text-light-main dark:text-main'>{con.text}</span>
                         </div>
                     ))}
                 </div>
 
                 <form
-                    // onSubmit={handleSubmit}
+                    onSubmit={handleSubmit}
                     action="#"
                     className="space-y-4 sm:space-y-10 p-4 lg:p-0"
                 >
@@ -102,10 +102,12 @@ function Contact() {
                                         xmlns="http://www.w3.org/2000/svg"
                                     >
                                         <path
+                                            className='dark:fill-white fill-[#FFCB6C]'
                                             d="M10 10C12.7614 10 15 7.76142 15 5C15 2.23858 12.7614 0 10 0C7.23858 0 5 2.23858 5 5C5 7.76142 7.23858 10 10 10Z"
                                             fill="#FCFCFC"
                                         />
                                         <path
+                                            className='dark:fill-white fill-[#FFCB6C]'
                                             d="M19 20H1C0.447715 20 0 19.5523 0 19C0 15.134 3.13402 12 7 12H13C16.866 12 20 15.134 20 19C20 19.5523 19.5523 20 19 20Z"
                                             fill="#FCFCFC"
                                         />
@@ -116,7 +118,7 @@ function Contact() {
                                     id="name"
                                     value={formData.name}
                                     onChange={handleChange}
-                                    className="flex-1 border-none outline-none bg-tertiary text-main placeholder:text-main text-base"
+                                    className="flex-1 border-none outline-none bg-transparent text-main placeholder:text-light-main dark:placeholder:text-main text-base"
                                     placeholder="john doe"
                                 />
                             </div>
@@ -140,6 +142,7 @@ function Contact() {
                                     >
                                         {" "}
                                         <path
+                                            className='dark:fill-white fill-[#FFCB6C]'
                                             fill="#FCFCFC"
                                             d="M12 22q-2.075 0-3.9-.788t-3.175-2.137T2.788 15.9T2 12t.788-3.9t2.137-3.175T8.1 2.788T12 2t3.9.788t3.175 2.137T21.213 8.1T22 12v1.45q0 1.475-1.012 2.513T18.5 17q-.875 0-1.65-.375t-1.3-1.075q-.725.725-1.638 1.088T12 17q-2.075 0-3.537-1.463T7 12t1.463-3.537T12 7t3.538 1.463T17 12v1.45q0 .65.425 1.1T18.5 15t1.075-.45t.425-1.1V12q0-3.35-2.325-5.675T12 4T6.325 6.325T4 12t2.325 5.675T12 20h4q.425 0 .713.288T17 21t-.288.713T16 22zm0-7q1.25 0 2.125-.875T15 12t-.875-2.125T12 9t-2.125.875T9 12t.875 2.125T12 15"
                                         />
@@ -150,7 +153,7 @@ function Contact() {
                                     id="email"
                                     value={formData.email}
                                     onChange={handleChange}
-                                    className="flex-1 border-none outline-none bg-tertiary text-main placeholder:text-main text-base"
+                                    className="flex-1 border-none outline-none bg-transparent text-main placeholder:text-light-main dark:placeholder:text-main text-base"
                                     placeholder="sample@gmail.com"
                                 />
                             </div>
@@ -163,16 +166,17 @@ function Contact() {
                                 Message
                             </label>
                             <div className="flex items-start border border-accent rounded-md px-4 py-3 bg-transparent">
-                                <div className="flex items-center border-r pr-4 mr-4">
+                                <div className="flex items-center border-r pr-4 border-slate-500 mr-4">
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
                                         width="24"
                                         height="24"
                                         viewBox="0 0 24 24"
                                     >
-                                        <g fill="none" fill-rule="evenodd">
-                                            <path d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z" />
+                                        <g fill="none" fillRule="evenodd">
+                                            <path className='dark:fill-white fill-[#FFCB6C]' d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z" />
                                             <path
+                                                className='dark:fill-white fill-[#FFCB6C]'
                                                 fill="#FCFCFC"
                                                 d="M2 6a3 3 0 0 1 3-3h14a3 3 0 0 1 3 3v10a3 3 0 0 1-3 3h-7.667L8 21.5c-.824.618-2 .03-2-1V19H5a3 3 0 0 1-3-3zm3-1a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h1.5A1.5 1.5 0 0 1 8 18.5v.5l2.133-1.6a2 2 0 0 1 1.2-.4H19a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1z"
                                             />
@@ -184,7 +188,7 @@ function Contact() {
                                     rows={8}
                                     value={formData.message}
                                     onChange={handleChange}
-                                    className="flex-1 border-none outline-none bg-tertiary text-main placeholder:text-main text-base"
+                                    className="flex-1 border-none outline-none bg-transparent text-main placeholder:text-light-main dark:placeholder:text-main text-base"
                                     placeholder="Detail your inquiry"
                                 ></textarea>
                             </div>
@@ -206,7 +210,7 @@ function Contact() {
                         <button
                             type="submit"
                             disabled={isLoading}
-                            className={`bg-main px-10 py-3 text-accent rounded-lg hover:bg-accent hover:text-tertiary transition-all duration-300 ease-in-out flex items-center justify-center ${isLoading ? 'opacity-50 cursor-not-allowed' : ''}`}
+                            className={`dark:bg-tertiary bg-light-tertiary px-10 py-3 text-accent rounded-lg hover:bg-accent hover:text-tertiary transition-all duration-300 ease-in-out flex items-center justify-center ${isLoading ? 'opacity-50 cursor-not-allowed' : ''}`}
                         >
                             {isLoading ? (
                                 <>
@@ -250,7 +254,7 @@ function Contact() {
                 </div>
                 <div class="h-[2px] bg-accent flex-grow"></div>
             </div>
-            <p className='pb-2'>© {year} Sean Venz Quijano | All Rights Reserved</p>
+            <p className='pb-2 text-light-main dark:text-main'>© {year} Sean Venz Quijano | All Rights Reserved</p>
         </section>
     )
 }

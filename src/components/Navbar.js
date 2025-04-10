@@ -28,7 +28,7 @@ function Navbar() {
     };
 
     return (
-        <nav className="p-6 flex items-center justify-center fixed w-full font-secondary">
+        <nav className="p-6 flex items-center justify-center fixed w-full font-secondary z-40 bg-light-main/80 dark:bg-main/80 backdrop-blur-sm transition-colors duration-300">
             <div className='flex items-center justify-center w-full max-w-screen-2xl'>
                 <img src={logo} alt="Logo" className='hover:cursor-pointer' onClick={() => handleScrollToSection('home')} />
                 <ul className="flex flex-row w-full items-center justify-center gap-8 text-base">
@@ -36,7 +36,11 @@ function Navbar() {
                         <li key={item.id}>
                             <button
                                 onClick={() => handleScrollToSection(item.id)}
-                                className={`transition-colors duration-200 hover:text-main hover:underline ${active === item.id ? 'text-main' : 'text-secondary'}`}
+                                className={`transition-colors duration-200 hover:text-light-main dark:hover:text-main hover:underline ${
+                                    active === item.id 
+                                        ? 'text-light-main dark:text-main' 
+                                        : 'text-light-secondary dark:text-secondary'
+                                }`}
                             >
                                 {item.label}
                             </button>
