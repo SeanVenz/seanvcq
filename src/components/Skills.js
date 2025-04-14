@@ -85,7 +85,7 @@ function Skills() {
                 My <span className="text-accent">Skills</span>
             </motion.h5>
             <motion.div 
-                className='max-w-screen-xl w-full flex justify-center md:px-4 2xl:px-0 items-center flex-row flex-wrap gap-10 pb-10'
+                className='max-w-screen-xl w-full flex justify-center px-[7%] md:px-4 2xl:px-0 items-center flex-row flex-wrap gap-5 sm:gap-10 pb-10'
                 variants={containerVariants}
             >
                 {skillsData.map((skill, id) => (

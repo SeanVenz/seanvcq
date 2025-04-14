@@ -166,7 +166,7 @@ function Contact() {
             </motion.div>
 
             <motion.div 
-                className='max-w-screen-md mt-4 text-main w-full flex flex-col flex-wrap gap-10'
+                className='max-w-screen-md mt-4 px-[7%] sm:px-0 text-main w-full flex flex-col flex-wrap gap-10'
                 variants={containerVariants}
             >
                 <motion.div 
@@ -317,7 +317,7 @@ function Contact() {
                         <motion.button
                             type="submit"
                             disabled={isLoading}
-                            className={`dark:bg-tertiary bg-light-tertiary px-10 py-3 text-accent rounded-lg hover:bg-accent hover:text-tertiary transition-all duration-300 ease-in-out flex items-center justify-center ${isLoading ? 'opacity-50 cursor-not-allowed' : ''}`}
+                            className={`dark:bg-tertiary w-full sm:w-max bg-light-tertiary px-10 py-3 text-accent rounded-lg hover:bg-accent hover:text-tertiary transition-all duration-300 ease-in-out flex items-center justify-center ${isLoading ? 'opacity-50 cursor-not-allowed' : ''}`}
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
                         >

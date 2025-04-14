@@ -33,7 +33,7 @@ function ThemeToggle() {
   return (
     <button
       onClick={toggleTheme}
-      className="fixed top-4 right-4 z-50 p-2 rounded-full bg-accent hover:bg-accent/90 transition-colors"
+      className="fixed top-4 hidden sm:block right-4 z-50 p-2 rounded-full bg-accent hover:bg-accent/90 transition-colors"
       aria-label={isDarkMode ? "Switch to light mode" : "Switch to dark mode"}
     >
       {isDarkMode ? (

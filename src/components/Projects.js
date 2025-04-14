@@ -96,7 +96,7 @@ function Projects() {
 
   return (
     <motion.section 
-      className='flex-col pb-0 mt-10 flex items-center justify-center gap-8 text-light-main dark:text-main relative' 
+      className='flex-col pb-0 mt-10 flex items-center px-[7%] sm:px-0 justify-center gap-8 text-light-main dark:text-main relative' 
       id='projects'
       variants={containerVariants}
       initial="hidden"

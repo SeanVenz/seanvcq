@@ -22,7 +22,7 @@ function Experience() {
 
     return (
         <section 
-            className='mt-10 pb-10 flex-col flex items-center justify-center gap-8 text-main' 
+            className='mt-10 pb-10 flex-col flex px-[7%] sm:px-0 items-center justify-center gap-8 text-main' 
             id='experience'
         >
             <motion.h2 
@@ -50,7 +50,7 @@ function Experience() {
                                 'bg-yellow-500 shadow-[0_0_20px_#FCD34D]'
                             }`} />
                             <div className={`absolute left-2 top-4 w-0.5 h-full transition-all duration-300 ${
-                                expandedId === id ? 'bg-gradient-to-b from-current to-transparent' : 'bg-gray-300'
+                                expandedId === id ? 'dark:bg-gradient-to-b dark:from-current dark:to-transparent bg-gradient-to-b from-black to-transparent' : 'bg-gray-300'
                             }`} />
                         </div>
                         <motion.div 
@@ -65,7 +65,7 @@ function Experience() {
                                 </h4>
                             </div>
                             <motion.div 
-                                className='border-l-2 pl-6 ml-5 flex gap-4 flex-col'
+                                className='pl-6 flex gap-4 flex-col'
                                 initial={{ height: 0, opacity: 0 }}
                                 animate={{ 
                                     height: expandedId === id ? 'auto' : 0,

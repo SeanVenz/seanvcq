@@ -53,16 +53,16 @@ function Home() {
     }
     
     return (
-        <section className='flex items-center justify-center h-screen' id='home'>
+        <section className='flex items-center px-[7%] lg:px-0 justify-center h-screen' id='home'>
             <motion.div 
-                className='max-w-screen-2xl flex items-center justify-center w-full'
+                className='max-w-screen-2xl flex flex-col sm:flex-row items-center justify-center w-full'
                 variants={containerVariants}
                 initial="hidden"
                 animate="visible"
             >
-                <motion.div className='flex flex-col gap-6' variants={containerVariants}>
+                <motion.div className='flex flex-col gap-6 justify-center items-center sm:justify-start sm:items-start' variants={containerVariants}>
                     <motion.h1 
-                        className='text-4xl text-light-main dark:text-main font-main'
+                        className='text-4xl text-center sm:text-left text-light-main dark:text-main font-main'
                         variants={itemVariants}
                     >
                         I'M <motion.span 
@@ -76,10 +76,10 @@ function Home() {
                         </motion.span>
                     </motion.h1>
                     <motion.p 
-                        className='text-light-main dark:text-main text-3xl font-secondary'
+                        className='text-light-main text-center sm:text-left dark:text-main text-3xl font-secondary'
                         variants={itemVariants}
                     >
-                        Junior Full-Stack Developer
+                        Junior Developer
                     </motion.p>
                     <motion.button 
                         onClick={(e) => handleScrollToSection(e, 'contact')}
@@ -91,9 +91,9 @@ function Home() {
                         Contact Me
                     </motion.button>
                 </motion.div>
-                <div className='flex flex-col items-center justify-center gap-4'>
+                <div className='flex items-center pt-10 sm:pt-0 flex-row sm:flex-col justify-center gap-4'>
                     <motion.div 
-                        className='h-32 border-r-2 border-accent'
+                        className='hidden sm:block h-32 border-r-2 border-accent'
                         initial={{ height: 0 }}
                         animate={{ height: 128 }}
                         transition={{ duration: 1, delay: 0.5 }}
