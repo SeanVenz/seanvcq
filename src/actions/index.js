@@ -6,23 +6,31 @@ export const sendEmail = async (templateParams, setSuccess, setError) => {
 
         if (!hasSent) {
             const response = await emailjs.send(
-                process.env.REACT_APP_EMAILJS_SERVICE_ID,
-                process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+                'service_c04rq66',
+                'template_qy0n03u',
                 templateParams,
-                process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+                'UgNkB1s1YkbynNOmM'
             );
-            setSuccess('Message Sent Successfully.');
-            localStorage.setItem('hasSent', 1);
-            console.log(response);
-            return true;
-        }
-        if(hasSent){
-            setError("You have already sent a message.");
-        }
 
+            if (response.status === 200) {
+                setSuccess('Message Sent Successfully!');
+                localStorage.setItem('hasSent', 1);
+                return true;
+            } else {
+                setError("Failed to send message. Please try again.");
+                return false;
+            }
+        } else {
+            setError("You have already sent a message recently. Please try again later.");
+            return false;
+        }
     } catch (error) {
-        setError("Something went wrong");
-        console.log(error);
+        console.error("Email sending error:", error);
+        if (error.text) {
+            setError(`Error: ${error.text}`);
+        } else {
+            setError("Failed to send message. Please try again later.");
+        }
         return false;
     }
 };

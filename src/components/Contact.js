@@ -94,27 +94,29 @@ function Contact() {
         e.preventDefault();
         setError("");
         setSuccess("");
+        setIsLoading(true);
 
         if (!formData.name || !formData.email || !formData.message) {
             setError("Please fill in all required fields");
+            setIsLoading(false);
             return;
         }
 
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailRegex.test(formData.email)) {
             setError("Please enter a valid email address");
+            setIsLoading(false);
             return;
         }
 
         try {
-            setIsLoading(true);
             const templateParams = {
-                name: formData.name,
-                email: formData.email,
+                from_name: formData.name,
+                from_email: formData.email,
                 message: formData.message
             };
 
-            const response = await sendEmail(templateParams, setSuccess, setError, setIsLoading);
+            const response = await sendEmail(templateParams, setSuccess, setError);
 
             if (response) {
                 setFormData({
@@ -125,7 +127,7 @@ function Contact() {
             }
         } catch (error) {
             console.error("Submission error:", error);
-            setError("An unexpected error occurred");
+            setError("An unexpected error occurred. Please try again later.");
         } finally {
             setIsLoading(false);
         }
@@ -249,13 +251,13 @@ function Contact() {
                                     value={formData.email}
                                     onChange={handleChange}
                                     className="flex-1 border-none outline-none bg-transparent text-main placeholder:text-light-main dark:placeholder:text-main text-base"
-                                    placeholder="sample@gmail.com"
+                                    placeholder="john@example.com"
                                 />
                             </motion.div>
                         </motion.div>
 
                         <motion.div 
-                            className="sm:col-span-2 pt-0"
+                            className="w-full"
                             variants={formFieldVariants}
                         >
                             <label
@@ -268,20 +270,18 @@ function Contact() {
                                 className="bg-transparent flex items-start border border-accent rounded-md px-4 py-3"
                                 whileFocus={{ scale: 1.02 }}
                             >
-                                <div className="flex items-center border-r border-slate-500 pr-4 mr-4">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                                        <g fill="none" fillRule="evenodd">
-                                            <path className='dark:fill-white fill-[#FFCB6C]' d="M2 6a3 3 0 0 1 3-3h14a3 3 0 0 1 3 3v10a3 3 0 0 1-3 3h-7.667L8 21.5c-.824.618-2 .03-2-1V19H5a3 3 0 0 1-3-3zm3-1a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h1.5A1.5 1.5 0 0 1 8 18.5v.5l2.133-1.6a2 2 0 0 1 1.2-.4H19a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1z"/>
-                                        </g>
+                                <div className="flex items-center border-r border-slate-500 pr-1 mr-3">
+                                    <svg className="w-5 h-5 mr-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                        <path className='dark:fill-white fill-[#FFCB6C]' d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H4V8l8 5 8-5v10zm-8-7L4 6h16l-8 5z"/>
                                     </svg>
                                 </div>
                                 <textarea
                                     id="message"
-                                    rows={8}
                                     value={formData.message}
                                     onChange={handleChange}
-                                    className="flex-1 border-none outline-none bg-transparent text-main placeholder:text-light-main dark:placeholder:text-main text-base"
-                                    placeholder="Detail your inquiry"
+                                    className="flex-1 border-none outline-none bg-transparent text-main placeholder:text-light-main dark:placeholder:text-main text-base resize-none"
+                                    placeholder="Your message here..."
+                                    rows="4"
                                 />
                             </motion.div>
                         </motion.div>
@@ -289,31 +289,29 @@ function Contact() {
 
                     <AnimatePresence>
                         {error && (
-                            <motion.div 
-                                className="bg-red-200 text-red-500 gap-2 rounded-md p-3 border border-red-500 border-dotted flex flex-row items-center"
+                            <motion.div
                                 initial={{ opacity: 0, y: -10 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 exit={{ opacity: 0, y: -10 }}
+                                className="text-red-500 text-sm"
                             >
-                                <span className="text-red-500 text-sm sm:text-base">{error}</span>
+                                {error}
                             </motion.div>
                         )}
                         {success && (
-                            <motion.div 
-                                className="bg-green-50 text-green-500 gap-2 rounded-md p-3 border border-green-500 border-dotted flex flex-row items-center"
+                            <motion.div
                                 initial={{ opacity: 0, y: -10 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 exit={{ opacity: 0, y: -10 }}
+                                className="text-green-500 text-sm"
                             >
-                                <span className="text-green-500 sm:text-base text-sm">
-                                    Your message has been sent!
-                                </span>
+                                {success}
                             </motion.div>
                         )}
                     </AnimatePresence>
 
                     <motion.div 
-                        className="flex items-center justify-center"
+                        className="flex justify-center"
                         variants={itemVariants}
                     >
                         <motion.button
@@ -403,4 +401,4 @@ function Contact() {
     )
 }
 
-export default Contact
+export default Contact;

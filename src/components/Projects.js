@@ -171,11 +171,6 @@ function Projects() {
                           <div className="text-center flex items-center justify-center gap-2 flex-col p-4">
                             <h2 className="text-lg font-main font-bold text-main">{project.title}</h2>
                             <p className='font-secondary text-sm sm:text-base text-secondary'>{project.desc}</p>
-                            <div className='flex items-center justify-center px-3 py-2 rounded-md bg-light-accent dark:bg-accent hover:bg-light-accent/90 dark:hover:bg-accent/90 transition-colors gap-2'>
-                              <span className="text-light-tertiary dark:text-secondary font-secondary font-medium text-sm">
-                                Hover to See More
-                              </span>
-                            </div>
                           </div>
                         </div>
                       </div>
