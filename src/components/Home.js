@@ -1,5 +1,6 @@
 import React from 'react'
 import { socialLinks } from '../constants/constant'
+import { motion } from 'framer-motion'
 
 function Home() {
     const handleScrollToSection = (e, id) => {
@@ -12,31 +13,105 @@ function Home() {
             });
         }
     };
+
+    const containerVariants = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: {
+                delayChildren: 0.3,
+                staggerChildren: 0.2
+            }
+        }
+    }
+
+    const itemVariants = {
+        hidden: { y: 20, opacity: 0 },
+        visible: {
+            y: 0,
+            opacity: 1,
+            transition: {
+                type: "spring",
+                stiffness: 100,
+                damping: 10
+            }
+        }
+    }
+
+    const socialVariants = {
+        hidden: { scale: 0, opacity: 0 },
+        visible: i => ({
+            scale: 1,
+            opacity: 1,
+            transition: {
+                type: "spring",
+                stiffness: 200,
+                damping: 20,
+                delay: i * 0.1
+            }
+        })
+    }
     
     return (
         <section className='flex items-center justify-center h-screen' id='home'>
-            <div className='max-w-screen-2xl flex items-center justify-center w-full'>
-                <div className='flex flex-col gap-6'>
-                    <h1 className='text-4xl text-light-main dark:text-main font-main'>I'M <span className='text-accent text-5xl'>SEAN QUIJANO</span></h1>
-                    <p className='text-light-main dark:text-main text-3xl font-secondary'>Junior Full-Stack Developer</p>
-                    <button 
+            <motion.div 
+                className='max-w-screen-2xl flex items-center justify-center w-full'
+                variants={containerVariants}
+                initial="hidden"
+                animate="visible"
+            >
+                <motion.div className='flex flex-col gap-6' variants={containerVariants}>
+                    <motion.h1 
+                        className='text-4xl text-light-main dark:text-main font-main'
+                        variants={itemVariants}
+                    >
+                        I'M <motion.span 
+                            className='text-accent text-5xl'
+                            variants={itemVariants}
+                            initial={{ opacity: 0, x: -20 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ delay: 0.5, type: "spring" }}
+                        >
+                            SEAN QUIJANO
+                        </motion.span>
+                    </motion.h1>
+                    <motion.p 
+                        className='text-light-main dark:text-main text-3xl font-secondary'
+                        variants={itemVariants}
+                    >
+                        Junior Full-Stack Developer
+                    </motion.p>
+                    <motion.button 
                         onClick={(e) => handleScrollToSection(e, 'contact')}
                         className='font-secondary py-3 px-5 mt-2 w-max rounded-md border-2 text-accent border-accent hover:bg-accent hover:text-main transition-all duration-300 ease-in-out'
+                        variants={itemVariants}
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
                     >
                         Contact Me
-                    </button>
-                </div>
+                    </motion.button>
+                </motion.div>
                 <div className='flex flex-col items-center justify-center gap-4'>
-                    <div className='h-32 border-r-2 border-accent'></div> 
+                    <motion.div 
+                        className='h-32 border-r-2 border-accent'
+                        initial={{ height: 0 }}
+                        animate={{ height: 128 }}
+                        transition={{ duration: 1, delay: 0.5 }}
+                    /> 
                     {socialLinks.map((link, id) => (
-                        <ul key={id}>
+                        <motion.ul key={id}
+                            custom={id}
+                            variants={socialVariants}
+                            initial="hidden"
+                            animate="visible"
+                        >
                             <li className='rounded-full hover:scale-125 transition-all duration-300 ease-in-out'>
                                 <a href={link.link} target='_blank' rel='noreferrer'>{link.logo}</a>
                             </li>
-                        </ul>
+                        </motion.ul>
                     ))}
                 </div>
-            </div>
+            </motion.div>
         </section>
     )
 }
