@@ -146,15 +146,15 @@ export const projectData = [
         category: 'personal',
         techStack: ['React', 'Tailwind', 'JavaScript']
     },
-    { 
-        title: 'DataFlower', 
-        link: 'https://dataflower.io/', 
-        img: dataflower, 
-        alt: "DataFlower", 
-        desc: 'New Backend-as-a-Service I helped in Developing',
-        category: 'work',
-        techStack: ['React', 'Node.js', 'MySQL', 'Express', 'Tailwind']
-    }
+    // { 
+    //     title: 'DataFlower', 
+    //     link: 'https://dataflower.io/', 
+    //     img: dataflower, 
+    //     alt: "DataFlower", 
+    //     desc: 'New Backend-as-a-Service I helped in Developing',
+    //     category: 'work',
+    //     techStack: ['React', 'Node.js', 'MySQL', 'Express', 'Tailwind']
+    // }
 ]
 
 export const experience = [
@@ -167,15 +167,15 @@ export const experience = [
         description: 'Developed a new Backend-as-a-Service product using the MERN stack (MySQL, Express, ReactJS, Node), ensuring accessibility across all screen sizes for the landing pages. Additionally, also implemented logs for the superadmin and analytics features for both users and admins in both the frontend and backend. Also worked as part of the team to develop a social media platform using the TALL stack (Tailwind, AlpineJS, Laravel, Livewire). Furthermore, Also created a custom hardcoded WordPress theme for the companys landing page.',
         skills: ['React', 'Node.js', 'MySQL', 'Express', 'Tailwind', 'AlpineJS', 'Laravel', 'Livewire', 'WordPress']
     },
-    { 
-        date: '2024', 
-        position: 'Junior Software Engineer', 
-        location: 'Cebu City', 
-        company: 'Kyocera', 
-        type: 'work',
-        description: 'Developed and maintained software solutions by creating and interpreting UML diagrams, programming firmware with C++ for server-side applications, and building and optimizing client-side interfaces using HTML and JavaScript to ensure seamless integration with server-side functionalities.',
-        skills: ['C++', 'UML', 'HTML', 'JavaScript', 'Firmware Development']
-    },
+    // { 
+    //     date: '2024', 
+    //     position: 'Junior Software Engineer', 
+    //     location: 'Cebu City', 
+    //     company: 'Kyocera', 
+    //     type: 'work',
+    //     description: 'Developed and maintained software solutions by creating and interpreting UML diagrams, programming firmware with C++ for server-side applications, and building and optimizing client-side interfaces using HTML and JavaScript to ensure seamless integration with server-side functionalities.',
+    //     skills: ['C++', 'UML', 'HTML', 'JavaScript', 'Firmware Development']
+    // },
     { 
         date: '2023', 
         position: 'Intern', 
