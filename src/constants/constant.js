@@ -152,6 +152,15 @@ export const projectData = [
         category: 'work',
         techStack: ['WordPress', 'PHP', 'MySQL', 'Bootstrap', 'JavaScript']
     },
+        {
+        title: 'Manito Manita',
+        link: 'https://manito-manita.vercel.app/',
+        img: secretSanta,
+        alt: "Secret Santa",
+        desc: 'Create Secret Santa Link and share with your friends!',
+        category: 'personal',
+        techStack: ['React', 'Tailwind', 'Firebase', 'JavaScript']
+    },
     {
         title: 'Pikocode',
         link: 'https://pikocode.com/',
@@ -178,15 +187,6 @@ export const projectData = [
         desc: 'Trading Platform for Gamers I helped in Developing',
         category: 'work',
         techStack: ['React', 'Laravel', 'MySQL', 'Tailwind']
-    },
-    {
-        title: 'Manito Manita',
-        link: 'https://manito-manita.vercel.app/',
-        img: secretSanta,
-        alt: "Secret Santa",
-        desc: 'Create Secret Santa Link and share with your friends!',
-        category: 'personal',
-        techStack: ['React', 'Tailwind', 'Firebase', 'JavaScript']
     },
     {
         title: 'Wallet Wise',
