@@ -20,7 +20,7 @@ function Projects() {
     return () => observer.disconnect()
   }, [])
 
-  const categories = ['all', 'personal', 'work']
+  const categories = ['all', 'personal', 'work', 'learning']
   const filteredProjects = projectData.filter(project => 
     selectedCategory === 'all' || project.category === selectedCategory
   )

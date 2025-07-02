@@ -7,6 +7,7 @@ import sinulan from '../assets/Sinulan.png'
 import permen from '../assets/Permen.png'
 import tradedungeon from '../assets/TradeDungeon.png'
 import pikocode from '../assets/pikocode.png'
+import quiz_builder from '../assets/Quiz_Builder.png'
 
 export const navItems = [
     { id: 'about', label: 'About' },
@@ -204,6 +205,15 @@ export const projectData = [
         desc: 'A Landing Page I created for our Crypto Guild',
         category: 'personal',
         techStack: ['React', 'Tailwind', 'JavaScript']
+    },
+    { 
+        title: 'Quiz Builder Plugin', 
+        link: 'https://github.com/SeanVenz/quiz-builder', 
+        img: quiz_builder, 
+        alt: "Quiz Builder Plugin", 
+        desc: 'A Plugin I am developing for creating quizzes in WordPress',
+        category: 'learning',
+        techStack: ['WordPress', 'Bootstrap', 'JavaScript', 'MySQL', 'PHP']
     },
 
 ]
