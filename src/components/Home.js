@@ -1,4 +1,3 @@
-import React from 'react'
 import { socialLinks } from '../constants/constant'
 import { motion } from 'framer-motion'
 

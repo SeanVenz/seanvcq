@@ -2,6 +2,11 @@ import secretSanta from '../assets/secret-santa-chris-kindle-merry-christmas-ano
 import walletwise from '../assets/walletwise.png'
 import jhscholars from '../assets/jhscholars.png'
 import dataflower from '../assets/dataflower.png'
+import adhd from '../assets/ADHD-site.png'
+import sinulan from '../assets/Sinulan.png'
+import permen from '../assets/Permen.png'
+import tradedungeon from '../assets/TradeDungeon.png'
+import pikocode from '../assets/pikocode.png'
 
 export const navItems = [
     { id: 'about', label: 'About' },
@@ -120,6 +125,60 @@ export const skillsData = [
 
 export const projectData = [
     { 
+        title: 'ADHD Test', 
+        link: 'https://adhd-owcy.pl/', 
+        img: adhd, 
+        alt: "ADHD", 
+        desc: 'An ADHD Test website I developed for a client complete with a test and results page',
+        category: 'work',
+        techStack: ['WordPress', 'PHP', 'MySQL', 'Bootstrap', 'JavaScript']
+    },
+    { 
+        title: 'Sinulan', 
+        link: 'https://sinulan.pl/', 
+        img: sinulan, 
+        alt: "Sinulan", 
+        desc: 'A website I developed for a client that provides information about their product',
+        category: 'work',
+        techStack: ['WordPress', 'PHP', 'MySQL', 'Bootstrap', 'JavaScript']
+    },
+    { 
+        title: 'PermenMedForte', 
+        link: 'https://permenmedforte.pl/', 
+        img: permen, 
+        alt: "PermenMedForte", 
+        desc: 'A website I developed for a client that provides information about their product',
+        category: 'work',
+        techStack: ['WordPress', 'PHP', 'MySQL', 'Bootstrap', 'JavaScript']
+    },
+    { 
+        title: 'Pikocode', 
+        link: 'https://pikocode.com/', 
+        img: pikocode, 
+        alt: "Pikocode", 
+        desc: 'A landing page I developed for an IT company',
+        category: 'work',
+        techStack: ['WordPress', 'PHP', 'MySQL', 'Bootstrap', 'JavaScript']
+    },
+    { 
+        title: 'DataFlower', 
+        link: 'https://dataflower.io/', 
+        img: dataflower, 
+        alt: "DataFlower", 
+        desc: 'New Backend-as-a-Service I helped in Developing',
+        category: 'work',
+        techStack: ['React', 'Node.js', 'MySQL', 'Express', 'Tailwind']
+    },
+    { 
+        title: 'Trade Dungeon', 
+        link: 'https://tradedungeon.com/', 
+        img: tradedungeon, 
+        alt: "Trade Dungeon", 
+        desc: 'Trading Platform for Gamers I helped in Developing',
+        category: 'work',
+        techStack: ['React', 'Laravel', 'MySQL', 'Tailwind']
+    },
+    { 
         title: 'Manito Manita', 
         link: 'https://manito-manita.vercel.app/', 
         img: secretSanta, 
@@ -134,7 +193,7 @@ export const projectData = [
         img: walletwise, 
         alt: "Wallet Wise", 
         desc: 'Grab Like Project for CIT-U Students',
-        category: 'ojt',
+        category: 'personal',
         techStack: ['React', 'Tailwind', 'Firebase', 'JavaScript']
     },
     { 
@@ -146,15 +205,7 @@ export const projectData = [
         category: 'personal',
         techStack: ['React', 'Tailwind', 'JavaScript']
     },
-    // { 
-    //     title: 'DataFlower', 
-    //     link: 'https://dataflower.io/', 
-    //     img: dataflower, 
-    //     alt: "DataFlower", 
-    //     desc: 'New Backend-as-a-Service I helped in Developing',
-    //     category: 'work',
-    //     techStack: ['React', 'Node.js', 'MySQL', 'Express', 'Tailwind']
-    // }
+
 ]
 
 export const experience = [
@@ -167,15 +218,6 @@ export const experience = [
         description: 'Developed a new Backend-as-a-Service product using the MERN stack (MySQL, Express, ReactJS, Node), ensuring accessibility across all screen sizes for the landing pages. Additionally, also implemented logs for the superadmin and analytics features for both users and admins in both the frontend and backend. Also worked as part of the team to develop a social media platform using the TALL stack (Tailwind, AlpineJS, Laravel, Livewire). Furthermore, Also created a custom hardcoded WordPress theme for the companys landing page.',
         skills: ['React', 'Node.js', 'MySQL', 'Express', 'Tailwind', 'AlpineJS', 'Laravel', 'Livewire', 'WordPress']
     },
-    // { 
-    //     date: '2024', 
-    //     position: 'Junior Software Engineer', 
-    //     location: 'Cebu City', 
-    //     company: 'Kyocera', 
-    //     type: 'work',
-    //     description: 'Developed and maintained software solutions by creating and interpreting UML diagrams, programming firmware with C++ for server-side applications, and building and optimizing client-side interfaces using HTML and JavaScript to ensure seamless integration with server-side functionalities.',
-    //     skills: ['C++', 'UML', 'HTML', 'JavaScript', 'Firmware Development']
-    // },
     { 
         date: '2023', 
         position: 'Intern', 

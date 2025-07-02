@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { navItems } from '../constants/constant';
 import logo from '../assets/favicon.png';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -103,7 +103,6 @@ function Navbar() {
                     whileTap={{ scale: 0.9 }}
                 />
 
-                {/* Desktop Menu */}
                 <div className="hidden md:flex items-center justify-center flex-1">
                     <ul className="flex flex-row items-center justify-center gap-8 text-base">
                         {navItems.map(item => (
@@ -123,9 +122,9 @@ function Navbar() {
                     </ul>
                 </div>
 
-                {/* Theme Toggle and Mobile Menu Button */}
+                <ThemeToggle className={'block md:hidden '}/>
+
                 <div className="flex items-center gap-4">
-                    <ThemeToggle />
                     <motion.button
                         className="md:hidden p-2 rounded-lg bg-accent/20 hover:bg-accent/30 mobile-menu"
                         onClick={() => setIsOpen(!isOpen)}
@@ -152,11 +151,7 @@ function Navbar() {
                             variants={menuVariants}
                         >
                             <div className="flex flex-col items-center justify-center h-full gap-6 pt-20 relative">
-                                {/* Header with Theme Toggle and Close Button */}
                                 <div className="absolute top-4 right-4 flex items-center gap-4 z-50">
-                                    <div className="p-2">
-                                        <ThemeToggle />
-                                    </div>
                                     <motion.button
                                         className="p-2 rounded-lg bg-accent/20 hover:bg-accent/30"
                                         onClick={() => setIsOpen(false)}

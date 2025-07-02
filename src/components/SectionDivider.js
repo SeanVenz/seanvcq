@@ -1,5 +1,3 @@
-import React from 'react';
-
 function SectionDivider({ className = "" }) {
   return (
     <div className={`relative w-full h-24 overflow-hidden ${className}`}>

@@ -1,4 +1,3 @@
-import React from 'react'
 import { about } from '../constants/constant'
 
 function About() {

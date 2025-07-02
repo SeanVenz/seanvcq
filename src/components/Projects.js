@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { projectData } from '../constants/constant'
 import { motion, AnimatePresence } from 'framer-motion'
 
@@ -20,7 +20,7 @@ function Projects() {
     return () => observer.disconnect()
   }, [])
 
-  // const categories = ['all', 'personal', 'work', 'ojt']
+  const categories = ['all', 'personal', 'work']
   const filteredProjects = projectData.filter(project => 
     selectedCategory === 'all' || project.category === selectedCategory
   )
@@ -112,7 +112,7 @@ function Projects() {
         className='font-secondary text-base text-center lg:text-lg text-light-secondary dark:text-secondary'
         variants={descriptionVariants}
       >
-        Personal Projects
+        Projects include Personal, and Work Experiences
       </motion.p>
 
       {/* Category Filter */}
@@ -120,7 +120,7 @@ function Projects() {
         className='flex flex-wrap gap-4 justify-center mb-8'
         variants={filterVariants}
       >
-        {/* {categories.map((category) => (
+        {categories.map((category) => (
           <motion.button
             key={category}
             onClick={() => setSelectedCategory(category)}
@@ -134,7 +134,7 @@ function Projects() {
           >
             {category.charAt(0).toUpperCase() + category.slice(1)}
           </motion.button>
-        ))} */}
+        ))}
       </motion.div>
 
       <motion.div 
@@ -143,7 +143,7 @@ function Projects() {
       >
         <div className='w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 px-4 sm:px-6 md:px-8'>
           <AnimatePresence mode="wait">
-            <ul className='col-span-full grid grid-cols-1 sm:grid-cols-2  gap-6 auto-rows-auto'>
+            <ul className='col-span-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-auto'>
               {filteredProjects.map((project, id) => (
                 <motion.li
                   key={id}
