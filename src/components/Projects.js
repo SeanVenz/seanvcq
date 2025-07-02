@@ -141,19 +141,15 @@ function Projects() {
         className='max-w-screen-2xl w-full flex justify-center items-center'
         variants={containerVariants}
       >
-        <div className='w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 px-4 sm:px-6 md:px-8'>
+        <div className='w-full px-8'>
           <AnimatePresence mode="wait">
-            <ul className='col-span-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-auto'>
+            <ul className='flex flex-row w-full gap-6 flex-wrap justify-center items-center'>
               {filteredProjects.map((project, id) => (
                 <motion.li
                   key={id}
                   custom={id}
                   variants={cardVariants}
-                  className={`relative h-64 w-full perspective-1000 group ${
-                    projectData.length % 2 === 1 && id === projectData.length - 1
-                      ? 'sm:col-span-2 sm:col-start-1 sm:col-end-3 sm:justify-self-center sm:w-[calc(50%-0.75rem)]'
-                      : ''
-                  }`}
+                  className={`relative h-64 w-full md:w-4/6 xl:w-[30%] perspective-1000 group`}
                 >
                   <div 
                     className="relative w-full h-full transition-transform duration-500 transform-style-3d group-hover:rotate-y-180"
