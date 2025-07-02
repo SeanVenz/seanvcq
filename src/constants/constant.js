@@ -125,92 +125,92 @@ export const skillsData = [
 ];
 
 export const projectData = [
-    { 
-        title: 'ADHD Test', 
-        link: 'https://adhd-owcy.pl/', 
-        img: adhd, 
-        alt: "ADHD", 
+    {
+        title: 'ADHD Test',
+        link: 'https://adhd-owcy.pl/',
+        img: adhd,
+        alt: "ADHD",
         desc: 'An ADHD Test website I developed for a client complete with a test and results page',
         category: 'work',
         techStack: ['WordPress', 'PHP', 'MySQL', 'Bootstrap', 'JavaScript']
     },
-    { 
-        title: 'Sinulan', 
-        link: 'https://sinulan.pl/', 
-        img: sinulan, 
-        alt: "Sinulan", 
+    {
+        title: 'Sinulan',
+        link: 'https://sinulan.pl/',
+        img: sinulan,
+        alt: "Sinulan",
         desc: 'A website I developed for a client that provides information about their product',
         category: 'work',
         techStack: ['WordPress', 'PHP', 'MySQL', 'Bootstrap', 'JavaScript']
     },
-    { 
-        title: 'PermenMedForte', 
-        link: 'https://permenmedforte.pl/', 
-        img: permen, 
-        alt: "PermenMedForte", 
+    {
+        title: 'PermenMedForte',
+        link: 'https://permenmedforte.pl/',
+        img: permen,
+        alt: "PermenMedForte",
         desc: 'A website I developed for a client that provides information about their product',
         category: 'work',
         techStack: ['WordPress', 'PHP', 'MySQL', 'Bootstrap', 'JavaScript']
     },
-    { 
-        title: 'Pikocode', 
-        link: 'https://pikocode.com/', 
-        img: pikocode, 
-        alt: "Pikocode", 
+    {
+        title: 'Pikocode',
+        link: 'https://pikocode.com/',
+        img: pikocode,
+        alt: "Pikocode",
         desc: 'A landing page I developed for an IT company',
         category: 'work',
         techStack: ['WordPress', 'PHP', 'MySQL', 'Bootstrap', 'JavaScript']
     },
-    { 
-        title: 'DataFlower', 
-        link: 'https://dataflower.io/', 
-        img: dataflower, 
-        alt: "DataFlower", 
+    {
+        title: 'DataFlower',
+        link: 'https://dataflower.io/',
+        img: dataflower,
+        alt: "DataFlower",
         desc: 'New Backend-as-a-Service I helped in Developing',
         category: 'work',
         techStack: ['React', 'Node.js', 'MySQL', 'Express', 'Tailwind']
     },
-    { 
-        title: 'Trade Dungeon', 
-        link: 'https://tradedungeon.com/', 
-        img: tradedungeon, 
-        alt: "Trade Dungeon", 
+    {
+        title: 'Trade Dungeon',
+        link: 'https://tradedungeon.com/',
+        img: tradedungeon,
+        alt: "Trade Dungeon",
         desc: 'Trading Platform for Gamers I helped in Developing',
         category: 'work',
         techStack: ['React', 'Laravel', 'MySQL', 'Tailwind']
     },
-    { 
-        title: 'Manito Manita', 
-        link: 'https://manito-manita.vercel.app/', 
-        img: secretSanta, 
-        alt: "Secret Santa", 
+    {
+        title: 'Manito Manita',
+        link: 'https://manito-manita.vercel.app/',
+        img: secretSanta,
+        alt: "Secret Santa",
         desc: 'Create Secret Santa Link and share with your friends!',
         category: 'personal',
         techStack: ['React', 'Tailwind', 'Firebase', 'JavaScript']
     },
-    { 
-        title: 'Wallet Wise', 
-        link: 'https://walletwise-pied.vercel.app/', 
-        img: walletwise, 
-        alt: "Wallet Wise", 
+    {
+        title: 'Wallet Wise',
+        link: 'https://walletwise-pied.vercel.app/',
+        img: walletwise,
+        alt: "Wallet Wise",
         desc: 'Grab Like Project for CIT-U Students',
         category: 'personal',
         techStack: ['React', 'Tailwind', 'Firebase', 'JavaScript']
     },
-    { 
-        title: 'JH Scholars', 
-        link: 'https://jhscholars.vercel.app/', 
-        img: jhscholars, 
-        alt: "JH Scholars", 
+    {
+        title: 'JH Scholars',
+        link: 'https://jhscholars.vercel.app/',
+        img: jhscholars,
+        alt: "JH Scholars",
         desc: 'A Landing Page I created for our Crypto Guild',
         category: 'personal',
         techStack: ['React', 'Tailwind', 'JavaScript']
     },
-    { 
-        title: 'Quiz Builder Plugin', 
-        link: 'https://github.com/SeanVenz/quiz-builder', 
-        img: quiz_builder, 
-        alt: "Quiz Builder Plugin", 
+    {
+        title: 'Quiz Builder Plugin',
+        link: 'https://github.com/SeanVenz/quiz-builder',
+        img: quiz_builder,
+        alt: "Quiz Builder Plugin",
         desc: 'A Plugin I am developing for creating quizzes in WordPress',
         category: 'learning',
         techStack: ['WordPress', 'Bootstrap', 'JavaScript', 'MySQL', 'PHP']
@@ -219,37 +219,56 @@ export const projectData = [
 ]
 
 export const experience = [
-    { 
-        date: '2024-2025', 
-        position: 'Junior Developer', 
-        location: 'Poland', 
-        company: 'Odysse', 
+    {
+        date: 'October 2024 - Present',
+        position: 'Junior Developer',
+        location: 'Poland',
+        company: 'Odysse',
         type: 'work',
-        description: 'Developed a new Backend-as-a-Service product using the MERN stack (MySQL, Express, ReactJS, Node), ensuring accessibility across all screen sizes for the landing pages. Additionally, also implemented logs for the superadmin and analytics features for both users and admins in both the frontend and backend. Also worked as part of the team to develop a social media platform using the TALL stack (Tailwind, AlpineJS, Laravel, Livewire). Furthermore, Also created a custom hardcoded WordPress theme for the companys landing page.',
-        skills: ['React', 'Node.js', 'MySQL', 'Express', 'Tailwind', 'AlpineJS', 'Laravel', 'Livewire', 'WordPress']
+        description: ['Developed and deployed custom, hard-coded WordPress themes for clients ensuring pixel-perfect responsiveness, SEO best practices, and sub-3-second page load times on both desktop and mobile.',
+            'Implemented a Backend-as-a-Service (BaaS) solution using the using MySQL, Express, React.js, and Node.js stack, contributing to RESTful API development, integration of secure authentication, and database performance optimizations.',
+            'Produced and published video tutorials demonstrating how to use various company-developed products, streamlining user onboarding and reducing support inquiries.',
+            'Designed and developed a variety of company products—including custom WordPress plugins and web applications—collaborating with cross-functional teams to deliver scalable, user-centric solutions.'],
+        skills: ['React', 'Node.js', 'MySQL', 'Express', 'Tailwind', 'AlpineJS', 'Laravel', 'Livewire', 'WordPress', 'PHP', 'JavaScript', 'Bootstrap']
     },
-    { 
-        date: '2023', 
-        position: 'Intern', 
-        location: 'Cebu City', 
-        company: 'Delonix', 
+    {
+        date: 'June 2023 - Aug 2023',
+        position: 'Intern',
+        location: 'Cebu City',
+        company: 'Delonix',
         type: 'work',
-        description: 'Collaborated with designers to ensure new web pages adhered to PSD formats, creating a seamless user experience and boosting customer satisfaction. Implemented SEO best practices by optimizing meta tags, images, and website performance, resulting in increased organic search traffic. Additionally, revamped existing WordPress design templates to align with client branding guidelines, ensuring consistency and professionalism.',
+        description: ['Collaborated with designer to ensure adherence to PSD format for new web pages, resulting in a seamless user experience and improved customer satisfaction.',
+            'Implemented SEO best practices by optimizing meta tags, images and improving website performance, leading to an increase in organic search traffic.',
+            'Revamped existing WordPress design templates from colleagues to align with client branding guidelines.'],
+        skills: ['Web Design', 'SEO', 'WordPress', 'PSD to HTML', 'UI/UX']
+    },
+    {
+        date: 'June 2023 - Aug 2023',
+        position: 'Freelance Content Development ',
+        location: 'Cebu City',
+        company: 'CodeChum',
+        type: 'work',
+        description: ['Researched and developed comprehensive web development topics on HTML, CSS, and Javascript forstudents.',
+            'Created quizzes to accompany web development tutorials, enhancing user learning experience',],
         skills: ['Web Design', 'SEO', 'WordPress', 'PSD to HTML', 'UI/UX']
     }
 ]
 
 export const contact = [
-    {icon: <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
-        <path className='dark:fill-white fill-[#FFCB6C]' fill="currentColor" d="M7 17q-.825 0-1.412-.587T5 15V5q0-.825.588-1.412T7 3h14q.825 0 1.413.588T23 5v10q0 .825-.587 1.413T21 17zm7-4.7L7 7.425V15h14V7.425zm0-2.45L21 5H7zM3 21q-.825 0-1.412-.587T1 19V6.5h2V19h16.5v2zM21 7.35V5H7v2.35V5h14z" />
-    </svg>, text: 'quijano.seanvenz@gmail.com'},
-    {icon: <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
-        <path className='dark:fill-white fill-[#FFCB6C]' fill="currentColor" d="M4.05 21q-.45 0-.75-.3t-.3-.75V15.9q0-.325.225-.587t.575-.363l3.45-.7q.35-.05.713.063t.587.337L10.9 17q.95-.55 1.8-1.213t1.625-1.437q.825-.8 1.513-1.662t1.187-1.788L14.6 8.45q-.2-.2-.275-.475T14.3 7.3l.65-3.5q.05-.325.325-.562T15.9 3h4.05q.45 0 .75.3t.3.75q0 3.125-1.362 6.175t-3.863 5.55t-5.55 3.863T4.05 21" />
-    </svg>, text: '(+63) 915-019-3697'},
+    {
+        icon: <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+            <path className='dark:fill-white fill-[#FFCB6C]' fill="currentColor" d="M7 17q-.825 0-1.412-.587T5 15V5q0-.825.588-1.412T7 3h14q.825 0 1.413.588T23 5v10q0 .825-.587 1.413T21 17zm7-4.7L7 7.425V15h14V7.425zm0-2.45L21 5H7zM3 21q-.825 0-1.412-.587T1 19V6.5h2V19h16.5v2zM21 7.35V5H7v2.35V5h14z" />
+        </svg>, text: 'quijano.seanvenz@gmail.com'
+    },
+    {
+        icon: <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+            <path className='dark:fill-white fill-[#FFCB6C]' fill="currentColor" d="M4.05 21q-.45 0-.75-.3t-.3-.75V15.9q0-.325.225-.587t.575-.363l3.45-.7q.35-.05.713.063t.587.337L10.9 17q.95-.55 1.8-1.213t1.625-1.437q.825-.8 1.513-1.662t1.187-1.788L14.6 8.45q-.2-.2-.275-.475T14.3 7.3l.65-3.5q.05-.325.325-.562T15.9 3h4.05q.45 0 .75.3t.3.75q0 3.125-1.362 6.175t-3.863 5.55t-5.55 3.863T4.05 21" />
+        </svg>, text: '(+63) 915-019-3697'
+    },
 ]
 
 export const form = [
     { type: 'email', placeholder: 'Enter your email', name: 'email' },
     { type: 'email', placeholder: 'Enter your email', name: 'email' }
 
-  ];
+];
