@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { projectData } from '../constants/constant'
 import { motion, AnimatePresence } from 'framer-motion'
 
@@ -20,7 +20,7 @@ function Projects() {
     return () => observer.disconnect()
   }, [])
 
-  const categories = ['all', 'personal', 'work', 'ojt']
+  const categories = ['all', 'personal', 'work']
   const filteredProjects = projectData.filter(project => 
     selectedCategory === 'all' || project.category === selectedCategory
   )
@@ -112,7 +112,7 @@ function Projects() {
         className='font-secondary text-base text-center lg:text-lg text-light-secondary dark:text-secondary'
         variants={descriptionVariants}
       >
-        Projects include Personal, OJT, and Work Experiences
+        Projects include Personal, and Work Experiences
       </motion.p>
 
       {/* Category Filter */}

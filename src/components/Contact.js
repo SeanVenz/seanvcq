@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { contact, socialLinks } from '../constants/constant'
 import { sendEmail } from '../actions';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -175,13 +175,13 @@ function Contact() {
                 >
                     {contact.map((con, index) => (
                         <motion.div 
-                            className='flex w-72 flex-row gap-4 items-center justify-center px-5 py-3 bg-light-main dark:bg-main rounded-md'
+                            className='flex w-max lg:w-72 flex-row gap-4 items-center justify-center px-5 py-3 bg-light-main dark:bg-main rounded-md'
                             key={index}
                             variants={itemVariants}
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
                         >
-                            {con.icon} <span className='text-light-main dark:text-main'>{con.text}</span>
+                            {con.icon} <span className='text-light-main dark:text-main break-all'>{con.text}</span>
                         </motion.div>
                     ))}
                 </motion.div>

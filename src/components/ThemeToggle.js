@@ -1,22 +1,19 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
-function ThemeToggle() {
+function ThemeToggle({className = ''}) {
   const [isDarkMode, setIsDarkMode] = useState(true);
 
   useEffect(() => {
-    // Check if user has a theme preference in localStorage
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme) {
       setIsDarkMode(savedTheme === 'dark');
     } else {
-      // Check system preference
       const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
       setIsDarkMode(prefersDark);
     }
   }, []);
 
   useEffect(() => {
-    // Update theme when isDarkMode changes
     if (isDarkMode) {
       document.documentElement.classList.add('dark');
       localStorage.setItem('theme', 'dark');
@@ -33,7 +30,7 @@ function ThemeToggle() {
   return (
     <button
       onClick={toggleTheme}
-      className="fixed top-4 hidden sm:block right-4 z-50 p-2 rounded-full bg-accent hover:bg-accent/90 transition-colors"
+      className={` z-[100] p-2 rounded-full bg-accent hover:bg-accent/90 transition-colors ${className}`}
       aria-label={isDarkMode ? "Switch to light mode" : "Switch to dark mode"}
     >
       {isDarkMode ? (
