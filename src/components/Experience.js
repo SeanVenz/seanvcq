@@ -72,7 +72,7 @@ function Experience() {
                                 }}
                                 transition={{ duration: 0.3 }}
                             >
-                                <div className='mt-2 flex text-base lg:text-xl italic font-medium font-secondary flex-row gap-3'>
+                                <div className='mt-2 flex text-light-main dark:text-main text-base lg:text-xl italic font-medium font-secondary flex-row gap-3'>
                                     <h5 className='text-light-main dark:text-main'>{exp.company}</h5>,
                                     <h6 className='text-light-main dark:text-main'>{exp.location}</h6>
                                 </div>
