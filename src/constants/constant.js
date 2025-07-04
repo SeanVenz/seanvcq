@@ -8,6 +8,11 @@ import permen from '../assets/Permen.png'
 import tradedungeon from '../assets/TradeDungeon.png'
 import pikocode from '../assets/pikocode.png'
 import quiz_builder from '../assets/Quiz_Builder.png'
+import epoxyAdelaide from '../assets/epoxyAdelaide.png'
+import epoxyPerth from '../assets/epoxyPerth.png'
+import epoxySunshine from '../assets/epoxySunshine.png'
+import paintersGeelong from '../assets/paintersGeelong.png'
+import tms from '../assets/tms.png'
 
 export const navItems = [
     { id: 'about', label: 'About' },
@@ -212,10 +217,54 @@ export const projectData = [
         img: quiz_builder,
         alt: "Quiz Builder Plugin",
         desc: 'A Plugin I am developing for creating quizzes in WordPress',
-        category: 'learning',
+        category: 'work',
         techStack: ['WordPress', 'Bootstrap', 'JavaScript', 'MySQL', 'PHP']
     },
-
+    {
+        title: 'Epoxy Flooring Perth',
+        link: 'https://epoxyflooringperth.com.au/',
+        img: epoxyPerth,
+        alt: "Epoxy Flooring Perth",
+        desc: 'A website I helped in developing for a client that provides information about their epoxy flooring services',
+        category: 'internship',
+        techStack: ['WordPress', 'Bootstrap', 'JavaScript', 'MySQL', 'PHP']
+    },
+    {
+        title: 'Epoxy Flooring Adelaide',
+        link: 'https://epoxyflooringadelaide.com.au/',
+        img: epoxyAdelaide,
+        alt: "Epoxy Flooring Adelaide",
+        desc: 'A website I helped in developing for a client that provides information about their epoxy flooring services',
+        category: 'internship',
+        techStack: ['WordPress', 'Bootstrap', 'JavaScript', 'MySQL', 'PHP']
+    },
+    {
+        title: 'Epoxy Flooring Sunshine Coast',
+        link: 'https://epoxyflooringsunshinecoast.com/',
+        img: epoxySunshine,
+        alt: "Epoxy Flooring Sunshine Coast",
+        desc: 'A website I helped in developing for a client that provides information about their epoxy flooring services',
+        category: 'internship',
+        techStack: ['WordPress', 'Bootstrap', 'JavaScript', 'MySQL', 'PHP']
+    },
+    {
+        title: 'Pro Painters Geelong',
+        link: 'https://www.propaintersgeelong.com/',
+        img: paintersGeelong,
+        alt: "Pro Painters Geelong",
+        desc: 'A website I helped in developing for a client that provides information about their painting services',
+        category: 'internship',
+        techStack: ['WordPress', 'Bootstrap', 'JavaScript', 'MySQL', 'PHP']
+    },
+    {
+        title: 'The Marketing Syndicate',
+        link: 'https://themarketingsyndicate.com.au/',
+        img: tms,
+        alt: "The Marketing Syndicate",
+        desc: 'A website I helped in developing for a client that provides information about their marketing services',
+        category: 'internship',
+        techStack: ['WordPress', 'Bootstrap', 'JavaScript', 'MySQL', 'PHP']
+    },
 ]
 
 export const experience = [

@@ -20,7 +20,7 @@ function Projects() {
     return () => observer.disconnect()
   }, [])
 
-  const categories = ['all', 'personal', 'work', 'learning']
+  const categories = ['all', 'personal', 'work', 'internship']
   const filteredProjects = projectData.filter(project => 
     selectedCategory === 'all' || project.category === selectedCategory
   )
@@ -112,7 +112,7 @@ function Projects() {
         className='font-secondary text-base text-center lg:text-lg text-light-secondary dark:text-secondary'
         variants={descriptionVariants}
       >
-        Projects include Personal, and Work Experiences
+        Projects include Work Experiences, Personal Projects, Internship Projects, and School Projects
       </motion.p>
 
       {/* Category Filter */}
