@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 function Projects() {
   const [selectedCategory, setSelectedCategory] = useState('all')
   const [isVisible, setIsVisible] = useState(false)
+  const [visibleCount, setVisibleCount] = useState(6)
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -20,10 +21,21 @@ function Projects() {
     return () => observer.disconnect()
   }, [])
 
+  // Reset visible count when category changes
+  useEffect(() => {
+    setVisibleCount(6)
+  }, [selectedCategory])
+
   const categories = ['all', 'personal', 'work', 'internship']
   const filteredProjects = projectData.filter(project => 
     selectedCategory === 'all' || project.category === selectedCategory
   )
+  const visibleProjects = filteredProjects.slice(0, visibleCount)
+  const hasMoreProjects = filteredProjects.length > visibleCount
+
+  const handleLoadMore = () => {
+    setVisibleCount(prev => prev + 6)
+  }
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -144,9 +156,9 @@ function Projects() {
         <div className='w-full px-8'>
           <AnimatePresence mode="wait">
             <ul className='flex flex-row w-full gap-6 flex-wrap justify-center items-center'>
-              {filteredProjects.map((project, id) => (
+              {visibleProjects.map((project, id) => (
                 <motion.li
-                  key={id}
+                  key={`${selectedCategory}-${id}`}
                   custom={id}
                   variants={cardVariants}
                   className={`relative h-64 w-full md:w-4/6 xl:w-[30%] perspective-1000 group`}
@@ -166,7 +178,7 @@ function Projects() {
                         <div className="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center">
                           <div className="text-center flex items-center justify-center gap-2 flex-col p-4">
                             <h2 className="text-lg font-main font-bold text-main">{project.title}</h2>
-                            <p className='font-secondary text-sm sm:text-base text-secondary'>{project.desc}</p>
+                            <p className='font-secondary text-sm sm:text-base text-main'>{project.desc}</p>
                           </div>
                         </div>
                       </div>
@@ -184,7 +196,7 @@ function Projects() {
                             {project.techStack.map((tech, techId) => (
                               <motion.span 
                                 key={techId}
-                                className='px-2 py-1 text-xs bg-light-main/20 dark:bg-main/20 rounded-full'
+                                className='px-2 py-1 text-xs text-main'
                                 whileHover={{ scale: 1.1 }}
                               >
                                 {tech}
@@ -201,7 +213,7 @@ function Projects() {
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                       >
-                        <span className="text-light-tertiary dark:text-secondary font-secondary font-medium text-sm">
+                        <span className="text-main dark:text-main font-secondary font-medium text-sm">
                           Visit Project
                         </span>
                         <svg
@@ -224,6 +236,36 @@ function Projects() {
           </AnimatePresence>
         </div>
       </motion.div>
+
+      {/* Load More Button */}
+      {hasMoreProjects && (
+        <motion.div
+          className="flex justify-center mt-8"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.5 }}
+        >
+          <motion.button
+            onClick={handleLoadMore}
+            className="px-6 py-3 rounded-full bg-light-accent dark:bg-accent text-light-tertiary dark:text-secondary font-secondary font-medium hover:bg-light-accent/90 dark:hover:bg-accent/90 transition-all duration-300 flex items-center gap-2"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <span>Load More Projects</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="currentColor"
+                d="M12 16l-6-6h12z"
+              />
+            </svg>
+          </motion.button>
+        </motion.div>
+      )}
     </motion.section>
   )
 }
