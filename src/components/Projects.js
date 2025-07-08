@@ -136,10 +136,10 @@ function Projects() {
           <motion.button
             key={category}
             onClick={() => setSelectedCategory(category)}
-            className={`px-4 py-2 rounded-full text-sm font-secondary transition-all duration-300 ${
+            className={`px-4 py-2 rounded-full text-sm font-secondary transition-all duration-300 text-main ${
               selectedCategory === category
-                ? 'bg-light-accent dark:bg-accent text-light-tertiary dark:text-secondary'
-                : 'bg-light-secondary/50 dark:bg-secondary/50 text-light-main dark:text-main hover:bg-light-secondary dark:hover:bg-secondary'
+                ? 'bg-light-accent dark:bg-accent'
+                : 'bg-light-secondary/50 dark:bg-secondary/50 hover:bg-light-secondary dark:hover:bg-secondary'
             }`}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}

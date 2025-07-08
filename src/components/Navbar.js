@@ -49,7 +49,8 @@ function Navbar() {
     const handleScrollToSection = (id) => {
         const section = document.getElementById(id);
         if (section) {
-            const offsetPosition = section.offsetTop;
+            const navbarHeight = 80;
+            const offsetPosition = section.offsetTop - navbarHeight;
             window.scrollTo({
                 top: offsetPosition,
                 behavior: 'smooth',
