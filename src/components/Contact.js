@@ -220,7 +220,7 @@ function Contact() {
                                     id="name"
                                     value={formData.name}
                                     onChange={handleChange}
-                                    className="flex-1 border-none outline-none bg-transparent text-main placeholder:text-light-main dark:placeholder:text-main text-base"
+                                    className="flex-1 border-none outline-none bg-transparent text-light-main dark:text-main placeholder:text-light-main dark:placeholder:text-main text-base"
                                     placeholder="john doe"
                                 />
                             </motion.div>
@@ -250,7 +250,7 @@ function Contact() {
                                     id="email"
                                     value={formData.email}
                                     onChange={handleChange}
-                                    className="flex-1 border-none outline-none bg-transparent text-main placeholder:text-light-main dark:placeholder:text-main text-base"
+                                    className="flex-1 border-none outline-none bg-transparent text-light-main dark:text-main placeholder:text-light-main dark:placeholder:text-main text-base"
                                     placeholder="john@example.com"
                                 />
                             </motion.div>
@@ -279,7 +279,7 @@ function Contact() {
                                     id="message"
                                     value={formData.message}
                                     onChange={handleChange}
-                                    className="flex-1 border-none outline-none bg-transparent text-main placeholder:text-light-main dark:placeholder:text-main text-base resize-none"
+                                    className="flex-1 border-none outline-none bg-transparent text-light-main dark:text-main placeholder:text-light-main dark:placeholder:text-main text-base resize-none"
                                     placeholder="Your message here..."
                                     rows="4"
                                 />
