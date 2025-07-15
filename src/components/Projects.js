@@ -169,18 +169,18 @@ function Projects() {
                     {/* Front of Card */}
                     <div className='absolute w-full h-full backface-hidden rounded-lg overflow-hidden'>
                       <div 
-                        className='w-full h-full bg-cover bg-center relative'
+                        className='w-full h-full bg-cover object-contain bg-center relative'
                         style={{ 
                           backgroundImage: `url(${project.img})`,
                           backgroundColor: 'rgba(0, 0, 0, 0.1)'
                         }}
                       >
-                        <div className="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center">
+                        {/* <div className="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center"> */}
                           <div className="text-center flex items-center justify-center gap-2 flex-col p-4">
-                            <h2 className="text-lg font-main font-bold text-main">{project.title}</h2>
-                            <p className='font-secondary text-sm sm:text-base text-main'>{project.desc}</p>
+                            {/* <h2 className="text-lg font-main font-bold text-main">{project.title}</h2>
+                            <p className='font-secondary text-sm sm:text-base text-main'>{project.desc}</p> */}
                           </div>
-                        </div>
+                        {/* </div> */}
                       </div>
                     </div>
 
