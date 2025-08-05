@@ -69,7 +69,7 @@ function Home() {
                         className='text-light-main text-center sm:text-left dark:text-main text-3xl font-secondary'
                         variants={itemVariants}
                     >
-                        Junior Developer
+                        Software Engineer
                     </motion.p>
                     <motion.a
                         href={resume}
