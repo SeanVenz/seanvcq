@@ -1,4 +1,5 @@
 import About from './components/About';
+import CharacterReference from './components/CharacterReference';
 import Contact from './components/Contact';
 import Experience from './components/Experience';
 import Home from './components/Home';
@@ -19,6 +20,7 @@ function App() {
       <Skills />
       <Projects />
       <Experience />
+      <CharacterReference />
       <Contact />
     </main>
   );

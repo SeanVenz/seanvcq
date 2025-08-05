@@ -18,7 +18,8 @@ export const navItems = [
     { id: 'about', label: 'About' },
     { id: 'projects', label: 'Projects' },
     { id: 'experience', label: 'Experience' },
-    { id: 'contact', label: 'Contact' }
+    { id: 'references', label: 'References' },
+    { id: 'contact', label: 'Contact' },
 ];
 
 export const socialLinks = [
@@ -319,3 +320,9 @@ export const form = [
     { type: 'email', placeholder: 'Enter your email', name: 'email' }
 
 ];
+
+export const characterReference = [
+    {name: "Marjan Bergosa", email: "janbergosa.graphics@gmail.com", phoneNumber: '09705890264', position: "Graphic Designer"},
+    {name: "Carlito Ong Tingson Jr", email: "carlitotingson.work@gmail.com ", phoneNumber: '09945484006', position: "Software Engineer"},
+    {name: "John Christian Rojo", email: "jchristianrojo@gmail.com", phoneNumber: '09761232911', position: "Software Engineer" },
+]
