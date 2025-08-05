@@ -1,31 +1,109 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { characterReference } from '../constants/constant';
+import { motion } from 'framer-motion';
 
 const CharacterReference = () => {
+    const [isVisible, setIsVisible] = useState(false);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                setIsVisible(entry.isIntersecting);
+            },
+            { threshold: 0.1 }
+        );
+
+        const element = document.getElementById('references');
+        if (element) observer.observe(element);
+
+        return () => observer.disconnect();
+    }, []);
+
+    const containerVariants = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.2,
+                delayChildren: 0.3
+            }
+        }
+    };
+
+    const titleVariants = {
+        hidden: { opacity: 0, y: 20 },
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: { duration: 0.5 }
+        }
+    };
+
+    const descriptionVariants = {
+        hidden: { opacity: 0, y: 20 },
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: { duration: 0.5, delay: 0.2 }
+        }
+    };
+
+    const cardVariants = {
+        hidden: { opacity: 0, y: 30 },
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: { duration: 0.5 }
+        }
+    };
     return (
-        <section className='flex-col pb-0 mt-10 flex items-center px-[7%] sm:px-0 justify-center gap-8 text-light-main dark:text-main' id="references">
+        <motion.section 
+            className='flex-col pb-0 mt-10 flex items-center px-[7%] sm:px-0 justify-center gap-8 text-light-main dark:text-main' 
+            id="references"
+            variants={containerVariants}
+            initial="hidden"
+            animate={isVisible ? "visible" : "hidden"}
+        >
             <div className="text-center">
-                <h2 className="text-2xl lg:text-4xl font-main text-light-main dark:text-main mb-4">
+                <motion.h2 
+                    className="text-2xl lg:text-4xl font-main text-light-main dark:text-main mb-4"
+                    variants={titleVariants}
+                >
                     Character References
-                </h2>
-                <p className="font-secondary text-base lg:text-lg text-light-secondary dark:text-secondary text-center max-w-2xl mx-auto">
+                </motion.h2>
+                <motion.p 
+                    className="font-secondary text-base lg:text-lg text-light-secondary dark:text-secondary text-center max-w-2xl mx-auto"
+                    variants={descriptionVariants}
+                >
                     Professional references who can speak to my character and work ethic
-                </p>
+                </motion.p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-screen-xl">
                 {characterReference.map((reference, index) => (
-                    <div
+                    <motion.div
                         key={index}
                         className="bg-light-secondary dark:bg-secondary rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 p-6 border border-light-tertiary dark:border-tertiary"
+                        variants={cardVariants}
+                        whileHover={{ 
+                            scale: 1.05,
+                            transition: { duration: 0.2 }
+                        }}
+                        whileTap={{ scale: 0.95 }}
                     >
                         <div className="text-center">
                             {/* Avatar Placeholder */}
-                            <div className="w-20 h-20 bg-light-accent dark:bg-accent rounded-full mx-auto mb-4 flex items-center justify-center">
+                            <motion.div 
+                                className="w-20 h-20 bg-light-accent dark:bg-accent rounded-full mx-auto mb-4 flex items-center justify-center"
+                                whileHover={{ 
+                                    rotate: 360,
+                                    transition: { duration: 0.5 }
+                                }}
+                            >
                                 <span className="text-light-main dark:text-main text-xl font-main font-bold">
                                     {reference.name.split(' ').map(n => n[0]).join('').slice(0, 2)}
                                 </span>
-                            </div>
+                            </motion.div>
 
                             {/* Name */}
                             <h3 className="text-xl font-main font-semibold text-light-main dark:text-main mb-2">
@@ -40,7 +118,10 @@ const CharacterReference = () => {
                             {/* Contact Information */}
                             <div className="space-y-3">
                                 {/* Email */}
-                                <div className="flex items-center justify-center space-x-2">
+                                <motion.div 
+                                    className="flex items-center justify-center space-x-2"
+                                    whileHover={{ scale: 1.05 }}
+                                >
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
                                         <path 
                                             className="fill-light-tertiary dark:fill-tertiary" 
@@ -53,10 +134,13 @@ const CharacterReference = () => {
                                     >
                                         {reference.email}
                                     </a>
-                                </div>
+                                </motion.div>
 
                                 {/* Phone */}
-                                <div className="flex items-center justify-center space-x-2">
+                                <motion.div 
+                                    className="flex items-center justify-center space-x-2"
+                                    whileHover={{ scale: 1.05 }}
+                                >
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
                                         <path 
                                             className="fill-light-tertiary dark:fill-tertiary" 
@@ -69,13 +153,13 @@ const CharacterReference = () => {
                                     >
                                         {reference.phoneNumber}
                                     </a>
-                                </div>
+                                </motion.div>
                             </div>
                         </div>
-                    </div>
+                    </motion.div>
                 ))}
             </div>
-        </section>
+        </motion.section>
     );
 };
 
