@@ -13,6 +13,9 @@ import epoxyPerth from '../assets/epoxyPerth.png'
 import epoxySunshine from '../assets/epoxySunshine.png'
 import paintersGeelong from '../assets/paintersGeelong.png'
 import tms from '../assets/tms.png'
+import christian from '../assets/christian.jpg'
+import marjan from '../assets/marjan.png'
+import carl from '../assets/carl.png'
 
 export const navItems = [
     { id: 'about', label: 'About' },
@@ -322,7 +325,7 @@ export const form = [
 ];
 
 export const characterReference = [
-    {name: "Marjan Bergosa", email: "janbergosa.graphics@gmail.com", phoneNumber: '09705890264', position: "Graphic Designer"},
-    {name: "Carlito Ong Tingson Jr", email: "carlitotingson.work@gmail.com ", phoneNumber: '09945484006', position: "Software Engineer"},
-    {name: "John Christian Rojo", email: "jchristianrojo@gmail.com", phoneNumber: '09761232911', position: "Software Engineer" },
+    {name: "Marjan Bergosa", email: "janbergosa.graphics@gmail.com", phoneNumber: '09705890264', position: "Graphic Designer", image: marjan},
+    {name: "Carlito Ong Tingson Jr", email: "carlitotingson.work@gmail.com ", phoneNumber: '09945484006', position: "Software Engineer", image: carl},
+    {name: "John Christian Rojo", email: "jchristianrojo@gmail.com", phoneNumber: '09761232911', position: "Software Engineer", image: christian },
 ]

@@ -92,17 +92,19 @@ const CharacterReference = () => {
                         whileTap={{ scale: 0.95 }}
                     >
                         <div className="text-center">
-                            {/* Avatar Placeholder */}
+                            {/* Avatar Image */}
                             <motion.div 
-                                className="w-20 h-20 bg-light-accent dark:bg-accent rounded-full mx-auto mb-4 flex items-center justify-center"
+                                className="w-20 h-20 rounded-full mx-auto mb-4 overflow-hidden border-2 border-light-accent dark:border-accent"
                                 whileHover={{ 
-                                    rotate: 360,
-                                    transition: { duration: 0.5 }
+                                    scale: 1.1,
+                                    transition: { duration: 0.3 }
                                 }}
                             >
-                                <span className="text-light-main dark:text-main text-xl font-main font-bold">
-                                    {reference.name.split(' ').map(n => n[0]).join('').slice(0, 2)}
-                                </span>
+                                <img 
+                                    src={reference.image} 
+                                    alt={reference.name}
+                                    className="w-full h-full object-cover"
+                                />
                             </motion.div>
 
                             {/* Name */}
