@@ -295,7 +295,7 @@ export const projectData = [
 
 export const experience = [
     {
-        date: 'October 2024 - Present',
+        date: 'September 2025 - Present',
         position: 'Full-Stack Developer',
         location: 'Hybrid',
         company: 'VBP - Ensombl',
