@@ -4,78 +4,84 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
     "./public/index.html",
   ],
-  darkMode: 'class',
   theme: {
     extend: {
+      colors: {
+        void: '#0A0A0F',
+        surface: '#12121A',
+        'surface-alt': '#1A1A25',
+        'surface-hover': '#22222F',
+        accent: '#6CB4FF',
+        'accent-dim': '#4A8FD4',
+        'accent-glow': 'rgba(108, 180, 255, 0.2)',
+        'accent-bright': '#A0D4FF',
+        aurora: '#4CFFC0',
+        'aurora-glow': 'rgba(76, 255, 192, 0.2)',
+        border: '#2A2A3A',
+        'border-accent': 'rgba(108, 180, 255, 0.13)',
+      },
       textColor: {
-        main: '#FCFCFC',              // White – stays the same
-        secondary: '#B0B3B8',         // Softer gray for better readability
-        tertiary: '#A0A0A5',          // Even softer for less prominent text
-        accent: '#FFCB6C',            // Golden yellow – stays the same
-        'light-main': '#34353A',      // Stays the same
-        'light-secondary': '#4C4D52', // Darker tone for better light theme contrast
-        'light-tertiary': '#7C7D82',  // Subtle muted gray
-        'light-accent': '#F8C878'     // Slightly brighter for light mode
+        primary: '#E8E8ED',
+        secondary: '#8888A0',
+        tertiary: '#55556A',
       },
-      
       backgroundColor: {
-        main: '#34353A',              // Dark gray – stays the same
-        secondary: '#3D3E42',         // Slight contrast with main (was #F0BF6C)
-        tertiary: '#2A2B2F',          // Darker background layer
-        accent: '#FFCB6C',            // Stays the same
-        quaternary: '#1E1F23',        // Deepest layer or footer
-      
-        'light-main': '#FCFCFC',      // White – stays the same
-        'light-secondary': '#F5F5F5', // Soft light gray for cards
-        'light-tertiary': '#E8E8E8',  // Light border/shadow backgrounds
-        'light-accent': '#FFD580',    // Brighter golden for contrast
-        'light-quaternary': '#DADADA' // Subtle border background
+        void: '#0A0A0F',
+        surface: '#12121A',
+        'surface-alt': '#1A1A25',
+        'surface-hover': '#22222F',
       },
-      borderColor:{
-        accent: '#FFCB6C',
-        'light-accent': '#F0BF6C'
-      },
-      animation: {
-        dots: "dots 1s infinite linear",
-        wave: "wave 8s ease-in-out infinite",
-        "wave-delayed": "wave 8s ease-in-out infinite 4s",
-      },
-      keyframes: {
-        dots: {
-          "20%": {
-            backgroundPosition: "0% 0%, 50% 50%, 100% 50%",
-          },
-          "40%": {
-            backgroundPosition: "0% 100%, 50% 0%, 100% 50%",
-          },
-          "60%": {
-            backgroundPosition: "0% 50%, 50% 100%, 100% 0%",
-          },
-          "80%": {
-            backgroundPosition: "0% 50%, 50% 50%, 100% 100%",
-          },
-        },
-        wave: {
-          "0%": { transform: "translateX(0%)" },
-          "50%": { transform: "translateX(-25%)" },
-          "100%": { transform: "translateX(-50%)" },
-        },
+      borderColor: {
+        DEFAULT: '#2A2A3A',
+        accent: '#6CB4FF',
+        'accent-subtle': 'rgba(108, 180, 255, 0.13)',
       },
       fontFamily: {
-        main: ['DM Serif Text', 'serif'],
-        secondary: ['Raleway', 'sans-serif'],
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+        mono: ['JetBrains Mono', 'monospace'],
       },
-      transform: {
-        'perspective-1000': 'perspective(1000px)',
+      fontSize: {
+        display: ['clamp(3rem, 8vw, 6rem)', { lineHeight: '1.05', letterSpacing: '-0.02em' }],
+        h1: ['clamp(2rem, 4vw, 3.5rem)', { lineHeight: '1.15', letterSpacing: '-0.01em' }],
+        h2: ['clamp(1.5rem, 3vw, 2rem)', { lineHeight: '1.3' }],
+        caption: ['0.875rem', { lineHeight: '1.4' }],
+        mono: ['0.8125rem', { lineHeight: '1.4' }],
       },
-      transformStyle: {
-        '3d': 'preserve-3d',
+      animation: {
+        'ticker': 'ticker 40s linear infinite',
+        'ticker-reverse': 'ticker-reverse 40s linear infinite',
+        'float': 'float 20s ease-in-out infinite',
+        'pulse-glow': 'pulse-glow 3s ease-in-out infinite',
+        'scroll-hint': 'scroll-hint 2s ease-in-out infinite',
       },
-      backfaceVisibility: {
-        'hidden': 'hidden',
+      keyframes: {
+        ticker: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-50%)' },
+        },
+        'ticker-reverse': {
+          '0%': { transform: 'translateX(-50%)' },
+          '100%': { transform: 'translateX(0)' },
+        },
+        float: {
+          '0%, 100%': { transform: 'translate(0, 0)' },
+          '25%': { transform: 'translate(10px, -15px)' },
+          '50%': { transform: 'translate(-5px, 10px)' },
+          '75%': { transform: 'translate(15px, 5px)' },
+        },
+        'pulse-glow': {
+          '0%, 100%': { opacity: '0.2' },
+          '50%': { opacity: '0.5' },
+        },
+        'scroll-hint': {
+          '0%, 100%': { transform: 'translateY(0)', opacity: '1' },
+          '50%': { transform: 'translateY(8px)', opacity: '0.5' },
+        },
       },
-      rotate: {
-        'y-180': 'rotateY(180deg)',
+      boxShadow: {
+        'glow': '0 0 20px rgba(108, 180, 255, 0.2), 0 0 60px rgba(108, 180, 255, 0.1)',
+        'glow-sm': '0 0 10px rgba(108, 180, 255, 0.15)',
+        'card': '0 0 30px rgba(108, 180, 255, 0.05)',
       },
     },
   },

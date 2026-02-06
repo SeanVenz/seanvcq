@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:www.igloo.inc)",
+      "WebFetch(domain:www.landing.love)",
+      "WebFetch(domain:www.awwwards.com)",
+      "WebFetch(domain:loadmo.re)",
+      "WebFetch(domain:refs.gallery)",
+      "WebFetch(domain:discourse.threejs.org)",
+      "WebFetch(domain:seanvcq.vercel.app)",
+      "WebFetch(domain:purelanding.page)",
+      "Bash(dir /b \"c:\\\\repo\\\\seanvcq\")"
+    ]
+  }
+}

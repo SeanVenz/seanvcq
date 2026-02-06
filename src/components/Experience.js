@@ -1,113 +1,132 @@
-import { useState, useEffect } from 'react'
-import { experience } from '../constants/constant'
-import { motion } from 'framer-motion'
+import { useState, useRef } from 'react';
+import { motion, useScroll, useTransform } from 'framer-motion';
+import { experience } from '../constants/constant';
+import SectionReveal from './SectionReveal';
 
 function Experience() {
-    const [expandedId, setExpandedId] = useState(null)
-    const [isVisible, setIsVisible] = useState(false)
+  const [expandedId, setExpandedId] = useState(null);
+  const containerRef = useRef(null);
 
-    useEffect(() => {
-        const observer = new IntersectionObserver(
-            ([entry]) => {
-                setIsVisible(entry.isIntersecting)
-            },
-            { threshold: 0.1 }
-        )
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ['start 0.8', 'end 0.8'],
+  });
 
-        const element = document.getElementById('experience')
-        if (element) observer.observe(element)
+  const lineHeight = useTransform(scrollYProgress, [0, 1], ['0%', '100%']);
 
-        return () => observer.disconnect()
-    }, [])
+  return (
+    <section id="experience" className="py-32 px-6">
+      <div className="max-w-4xl mx-auto">
+        <SectionReveal>
+          <span className="text-xs font-medium uppercase tracking-[0.2em] text-accent mb-4 block">
+            Experience
+          </span>
+          <h2 className="text-h1 font-extralight text-primary mb-16">
+            Where I've <span className="text-gradient">worked</span>
+          </h2>
+        </SectionReveal>
 
-    return (
-        <section
-            className='mt-10 pb-10 flex-col flex px-[7%] sm:px-0 items-center justify-center gap-8 text-main'
-            id='experience'
-        >
-            <motion.h2
-                className='text-2xl lg:text-4xl font-main mt-10 text-light-main dark:text-main'
-                initial={{ opacity: 0, y: 20 }}
-                animate={isVisible ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.5 }}
-            >
-                Experience
-            </motion.h2>
-            <ul className='max-w-screen-md text-main w-full flex flex-col flex-wrap gap-10'>
-                {experience.map((exp, id) => (
-                    <motion.li
-                        key={id}
-                        className='flex flex-row gap-4 cursor-pointer'
-                        initial={{ opacity: 0, x: -20 }}
-                        animate={isVisible ? { opacity: 1, x: 0 } : {}}
-                        transition={{ duration: 0.5, delay: id * 0.1 }}
-                        onClick={() => setExpandedId(expandedId === id ? null : id)}
+        {/* Timeline */}
+        <div ref={containerRef} className="relative">
+          {/* Animated timeline line */}
+          <div className="absolute left-[7px] top-0 bottom-0 w-[2px] bg-border">
+            <motion.div
+              className="w-full bg-accent origin-top"
+              style={{ height: lineHeight }}
+            />
+          </div>
+
+          {/* Experience entries */}
+          <div className="flex flex-col gap-12">
+            {experience.map((exp, id) => (
+              <SectionReveal key={id} delay={id * 0.1}>
+                <div
+                  className="relative pl-10 cursor-pointer group"
+                  onClick={() => setExpandedId(expandedId === id ? null : id)}
+                >
+                  {/* Timeline dot */}
+                  <div className="absolute left-0 top-1.5">
+                    <div
+                      className={`w-4 h-4 rounded-full border-2 transition-all duration-300 ${
+                        expandedId === id
+                          ? 'bg-accent border-accent shadow-glow-sm'
+                          : 'bg-void border-border group-hover:border-accent'
+                      }`}
+                    />
+                  </div>
+
+                  {/* Content */}
+                  <div>
+                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 mb-1">
+                      <h3 className="text-lg font-medium text-primary group-hover:text-accent transition-colors">
+                        {exp.position}
+                      </h3>
+                      <span className="text-xs text-tertiary font-mono">{exp.date}</span>
+                    </div>
+
+                    <div className="flex items-center gap-2 text-secondary text-sm mb-3">
+                      <span>{exp.company}</span>
+                      <span className="text-tertiary">·</span>
+                      <span className="text-tertiary">{exp.location}</span>
+                    </div>
+
+                    {/* Expandable details */}
+                    <motion.div
+                      initial={false}
+                      animate={{
+                        height: expandedId === id ? 'auto' : 0,
+                        opacity: expandedId === id ? 1 : 0,
+                      }}
+                      transition={{ duration: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }}
+                      className="overflow-hidden"
                     >
-                        <div className='relative'>
-                            <div className={`w-4 h-4 rounded-full transition-all duration-300 ${exp.type === 'work' ? 'bg-blue-500 shadow-[0_0_20px_#3B82F6]' :
-                                    exp.type === 'education' ? 'bg-green-500 shadow-[0_0_20px_#22C55E]' :
-                                        'bg-yellow-500 shadow-[0_0_20px_#FCD34D]'
-                                }`} />
-                            <div className={`absolute left-2 top-4 w-0.5 h-full transition-all duration-300 ${expandedId === id ? 'dark:bg-gradient-to-b dark:from-current dark:to-transparent bg-gradient-to-b from-black to-transparent' : 'bg-gray-300'
-                                }`} />
-                        </div>
-                        <motion.div
-                            className={`flex flex-col pr-8 lg:pr-0 lg:p-0 transition-all duration-300 ${expandedId === id ? 'scale-105' : ''
-                                }`}
-                            layout
-                        >
-                            <div className='flex flex-row items-center gap-4'>
-                                <h4 className='font-main ml-5 text-lg lg:text-3xl font-bold text-light-main dark:text-main hover:text-accent dark:hover:text-accent transition-colors duration-300'>
-                                    {exp.position}
-                                </h4>
-                                
-                            </div>
-                            
-                            <motion.div
-                                className='pl-6 flex gap-4 flex-col'
-                                initial={{ height: 0, opacity: 0 }}
-                                animate={{
-                                    height: expandedId === id ? 'auto' : 0,
-                                    opacity: expandedId === id ? 1 : 0
-                                }}
-                                transition={{ duration: 0.3 }}
+                      {exp.description && (
+                        <ul className="space-y-2 mb-4 mt-2">
+                          {exp.description.map((desc, descId) => (
+                            <li key={descId} className="text-secondary text-sm font-light leading-relaxed flex gap-2">
+                              <span className="text-accent mt-1.5 shrink-0">·</span>
+                              <span>{desc}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+
+                      {exp.skills && (
+                        <div className="flex flex-wrap gap-2 mt-3">
+                          {exp.skills.map((skill, skillId) => (
+                            <span
+                              key={skillId}
+                              className="px-2.5 py-1 text-mono font-mono bg-surface-alt rounded-md text-tertiary"
                             >
-                                <div className='mt-2 flex text-light-main dark:text-main text-base lg:text-xl italic font-medium font-secondary flex-row gap-3'>
-                                    <h5 className='text-light-main dark:text-main'>{exp.company}</h5>,
-                                    <h6 className='text-light-main dark:text-main'>{exp.location}</h6>
-                                </div>
+                              {skill}
+                            </span>
+                          ))}
+                        </div>
+                      )}
+                    </motion.div>
 
-                                <span className='font-secondary text-justify text-sm lg:text-base text-light-main dark:text-main'>{exp.date}</span>
-
-                                {exp.description && (
-                                    <div className='flex flex-wrap gap-2 mt-2'>
-                                        {exp.description.map((desc) => (
-                                            <li className='list-disc ml-4 font-secondary text-justify text-sm lg:text-base text-light-main dark:text-main'>
-                                                {desc}
-                                            </li>
-                                        ))}
-                                    </div>
-                                )}
-
-                                {exp.skills && (
-                                    <div className='flex flex-wrap gap-2 mt-2'>
-                                        {exp.skills.map((skill, skillId) => (
-                                            <span
-                                                key={skillId}
-                                                className='px-2 py-1 text-xs bg-light-secondary dark:bg-secondary rounded-full text-light-main dark:text-main'
-                                            >
-                                                {skill}
-                                            </span>
-                                        ))}
-                                    </div>
-                                )}
-                            </motion.div>
-                        </motion.div>
-                    </motion.li>
-                ))}
-            </ul>
-        </section>
-    )
+                    {/* Expand hint */}
+                    <div className="flex items-center gap-1 mt-2">
+                      <motion.span
+                        className="text-xs text-tertiary"
+                        animate={{ rotate: expandedId === id ? 180 : 0 }}
+                        transition={{ duration: 0.3 }}
+                      >
+                        ▾
+                      </motion.span>
+                      <span className="text-xs text-tertiary">
+                        {expandedId === id ? 'Collapse' : 'Expand'}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </SectionReveal>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 }
 
-export default Experience
+export default Experience;

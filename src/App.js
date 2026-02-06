@@ -1,27 +1,33 @@
-import About from './components/About';
-import CharacterReference from './components/CharacterReference';
-import Contact from './components/Contact';
+import { useScroll } from 'framer-motion';
+import SideNav from './components/SideNav';
+import ScrollProgress from './components/ScrollProgress';
+import ParticleField from './components/ParticleField';
+import Hero from './components/Hero';
+import AboutSection from './components/AboutSection';
+import Work from './components/Work';
 import Experience from './components/Experience';
-import Home from './components/Home';
-import MovingBackground from './components/MovingBackground';
-import Navbar from './components/Navbar';
-import Projects from './components/Projects';
-import Skills from './components/Skills';
-import ThemeToggle from './components/ThemeToggle';
+import References from './components/References';
+import Contact from './components/Contact';
 
 function App() {
+  const { scrollYProgress } = useScroll();
+
   return (
-    <main className='dark:bg-main bg-light-main w-full h-full transition-colors duration-300'>
-      <MovingBackground />
-      <ThemeToggle className='hidden md:block fixed top-4 right-4' />
-      <Navbar />
-      <Home />
-      <About />
-      <Skills />
-      <Projects />
-      <Experience />
-      <CharacterReference />
-      <Contact />
+    <main className='bg-void w-full min-h-screen relative'>
+      {/* Global ambient particles */}
+      <div className="fixed inset-0 z-0 pointer-events-none" aria-hidden="true">
+        <ParticleField />
+      </div>
+      <ScrollProgress scrollYProgress={scrollYProgress} />
+      <SideNav />
+      <div className="relative z-[1]">
+        <Hero />
+        <AboutSection />
+        <Work />
+        <Experience />
+        <References />
+        <Contact />
+      </div>
     </main>
   );
 }

@@ -1,36 +1,81 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    font-family: 'Inter', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #0A0A0F;
+    color: #E8E8ED;
+  }
+
+  code {
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  /* Scrollbar styling */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #0A0A0F;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #2A2A3A;
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #6CB4FF;
+  }
 }
 
 @layer utilities {
-  .perspective-1000 {
-    perspective: 1000px;
+  .text-gradient {
+    background: linear-gradient(135deg, #6CB4FF, #4CFFC0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
-  
-  .transform-style-3d {
-    transform-style: preserve-3d;
+
+  .glow-accent {
+    box-shadow: 0 0 20px rgba(108, 180, 255, 0.2),
+                0 0 60px rgba(108, 180, 255, 0.1);
   }
-  
-  .backface-hidden {
-    backface-visibility: hidden;
+
+  .card-glow:hover {
+    border-color: rgba(108, 180, 255, 0.27);
+    box-shadow: inset 0 0 30px rgba(108, 180, 255, 0.03),
+                0 0 30px rgba(108, 180, 255, 0.05);
   }
-  
-  .rotate-y-180 {
-    transform: rotateY(180deg);
+
+  .ticker-pause:hover {
+    animation-play-state: paused;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }
