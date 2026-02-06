@@ -64,11 +64,15 @@ function Experience() {
                       <span className="text-xs text-tertiary font-mono">{exp.date}</span>
                     </div>
 
-                    <div className="flex items-center gap-2 text-secondary text-sm mb-3">
+                    <div className="flex items-center gap-2 text-secondary text-sm mb-1">
                       <span>{exp.company}</span>
                       <span className="text-tertiary">·</span>
                       <span className="text-tertiary">{exp.location}</span>
                     </div>
+
+                    {exp.note && (
+                      <p className="text-xs text-accent/70 font-mono mb-3">{exp.note}</p>
+                    )}
 
                     {/* Expandable details */}
                     <motion.div

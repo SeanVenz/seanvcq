@@ -333,6 +333,7 @@ export const experience = [
         location: 'Poland',
         company: 'Odysse',
         type: 'work',
+        note: 'Full-time (Oct 2024 – Oct 2025) · Part-time (Oct 2025 – Present)',
         description: ['Developed and deployed custom, hard-coded WordPress themes for clients ensuring pixel-perfect responsiveness, SEO best practices, and sub-3-second page load times on both desktop and mobile.',
             'Implemented a Backend-as-a-Service (BaaS) solution using the using MySQL, Express, React.js, and Node.js stack, contributing to RESTful API development, integration of secure authentication, and database performance optimizations.',
             'Produced and published video tutorials demonstrating how to use various company-developed products, streamlining user onboarding and reducing support inquiries.',
