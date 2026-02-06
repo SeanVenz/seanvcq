@@ -1,43 +1,29 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 
-const useActiveSection = (sectionIds, options = {}) => {
-  const { threshold = 0.2, rootMargin = '-10% 0px -60% 0px' } = options;
+const useActiveSection = (sectionIds) => {
   const [activeSection, setActiveSection] = useState(sectionIds[0] || '');
-  const visibleSections = useRef(new Set());
 
   useEffect(() => {
-    const observers = [];
+    const handleScroll = () => {
+      const offset = window.innerHeight * 0.3;
+      let current = sectionIds[0];
 
-    sectionIds.forEach((id) => {
-      const element = document.getElementById(id);
-      if (!element) return;
+      for (const id of sectionIds) {
+        const el = document.getElementById(id);
+        if (!el) continue;
+        const top = el.getBoundingClientRect().top;
+        if (top <= offset) {
+          current = id;
+        }
+      }
 
-      const observer = new IntersectionObserver(
-        ([entry]) => {
-          if (entry.isIntersecting) {
-            visibleSections.current.add(id);
-          } else {
-            visibleSections.current.delete(id);
-          }
-
-          // Pick the first visible section in DOM order
-          const current = sectionIds.find((s) => visibleSections.current.has(s));
-          if (current) {
-            setActiveSection(current);
-          }
-        },
-        { threshold, rootMargin }
-      );
-
-      observer.observe(element);
-      observers.push(observer);
-    });
-
-    return () => {
-      observers.forEach((observer) => observer.disconnect());
-      visibleSections.current.clear();
+      setActiveSection(current);
     };
-  }, [sectionIds, threshold, rootMargin]);
+
+    handleScroll();
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [sectionIds]);
 
   return activeSection;
 };
